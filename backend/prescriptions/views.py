@@ -11,7 +11,8 @@ from .serializers import PrescritptionSerializer
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_all_prescriptions(request):
-    drugs = Prescription.objects.all()
-    serializer = PrescritptionSerializer(drugs, many=True)
-    return Response(serializer.data)
+    return Response('ok')
+    # drugs = Prescription.objects.all()
+    # serializer = PrescritptionSerializer(drugs, many=True)
+    # return Response(serializer.data)
 
