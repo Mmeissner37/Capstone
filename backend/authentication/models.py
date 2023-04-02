@@ -1,9 +1,13 @@
 # from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    is_owner = models.BooleanField('owner status', default=True)
+    is_vet = models.BooleanField('owner status', default=False)
+
+
     '''
     This is a custom version of the built in User class
     It contains all of the built in fields and functionality of the standard User

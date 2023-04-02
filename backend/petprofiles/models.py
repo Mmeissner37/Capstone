@@ -1,6 +1,7 @@
 from django.db import models
 from authentication.models import User
-from prescriptions import Prescription
+from prescriptions.models import Prescription
+
 
 # Create your models here.
 class PetProfile(models.Model):
