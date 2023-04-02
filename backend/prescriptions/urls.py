@@ -3,6 +3,6 @@ from prescriptions import views
 
 
 urlpatterns = {
-    path('alldrugs/', views.get_all_prescriptions),
+    path('', views.get_all_prescriptions),
 }
 

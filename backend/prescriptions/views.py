@@ -13,6 +13,6 @@ from .serializers import PrescritptionSerializer
 def get_all_prescriptions(request):
     drugs = Prescription.objects.all()
     serializer = PrescritptionSerializer(drugs, many=True)
-    return Response('ok')
+    return Response(serializer.data)
 
 
