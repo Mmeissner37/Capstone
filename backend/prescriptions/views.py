@@ -15,4 +15,3 @@ def get_all_prescriptions(request):
     serializer = PrescritptionSerializer(drugs, many=True)
     return Response(serializer.data)
 
-

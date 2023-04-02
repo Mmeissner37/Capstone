@@ -2,8 +2,8 @@ from django.urls import path, include
 from petprofiles import views 
 
 
-urlpatterns = {
+urlpatterns = [
     path('', views.get_all_profiles),
     path('<int:pk>/', views.pet_details),
-}
+]
 
