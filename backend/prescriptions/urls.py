@@ -4,5 +4,6 @@ from prescriptions import views
 
 urlpatterns = [
     path('', views.get_all_prescriptions),
+    path('filter/', views.pet_drugs),
 ]
 

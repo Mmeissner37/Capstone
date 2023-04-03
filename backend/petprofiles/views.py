@@ -25,13 +25,14 @@ def pet_details(request, pk):
         serializer = PetProfileSerializer(one_profile)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-
-@api_view(['GET'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def pet_drugs(request):
-    all_drugs = PetProfile.objects.filter(pet_drugs=request.prescriptions)
-    serializer = PetProfileSerializer(all_drugs, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
-
+def create_pet(request):
+    newpet = get_object_or_404(PetProfile)
+    if request.method == "POST":
+        serializer = PetProfileSerializer(newpet, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 

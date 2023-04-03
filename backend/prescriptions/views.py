@@ -15,3 +15,13 @@ def get_all_prescriptions(request):
     serializer = PrescritptionSerializer(drugs, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def pet_drugs(request):
+    print(
+        'User', f"{request.user.id} {request.user.email} {request.user.username}")
+    all_drugs = Prescription.objects.filter(data=request.prescriptions)
+    serializer = PrescritptionSerializer(all_drugs, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
