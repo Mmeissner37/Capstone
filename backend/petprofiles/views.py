@@ -12,10 +12,9 @@ from .models import Prescription
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_all_profiles(request):
-    return Response('ok')
-    # profiles = PetProfile.objects.all()
-    # serializer = PetProfileSerializer(profiles, many=True)
-    # return Response(serializer.data)
+    profiles = PetProfile.objects.all()
+    serializer = PetProfileSerializer(profiles, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -24,4 +23,15 @@ def pet_details(request, pk):
     one_profile = get_object_or_404(PetProfile, pk=pk)
     if request.method == 'GET':
         serializer = PetProfileSerializer(one_profile)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def pet_drugs(request):
+    all_drugs = PetProfile.objects.filter(pet_drugs=request.prescriptions)
+    serializer = PetProfileSerializer(all_drugs, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
