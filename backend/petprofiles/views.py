@@ -31,8 +31,8 @@ def create_pet(request):
     newpet = get_object_or_404(PetProfile)
     if request.method == "POST":
         serializer = PetProfileSerializer(newpet, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
