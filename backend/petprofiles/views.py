@@ -28,11 +28,22 @@ def pet_details(request, pk):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_pet(request):
-    newpet = get_object_or_404(PetProfile)
     if request.method == "POST":
-        serializer = PetProfileSerializer(newpet, data=request.data)
+        serializer = PetProfileSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
+        serializer.save(user=request.user, precription=request.prescription)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+@api_view(['PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
+def alter_pet(request, pk):
+    alterpet = get_object_or_404(PetProfile, pk=pk)
+    if request.method == 'PUT':
+        serializer = PetProfileSerializer(alterpet, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+    elif request.method == 'DELETE':
+        alterpet.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
