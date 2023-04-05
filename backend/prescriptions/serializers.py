@@ -2,9 +2,9 @@ from rest_framework import serializers
 from .models import Prescription
 
 
-class PrescritptionSerializer(serializers.ModelSerializer):
+class PrescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prescription
-        fields = ['drug_name', 'drug_dose', 'drug_instr']
+        fields = ['id', 'drug_name', 'drug_dose', 'drug_instr']
 
 

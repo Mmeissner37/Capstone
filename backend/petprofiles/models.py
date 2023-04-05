@@ -1,6 +1,6 @@
 from django.db import models
 from authentication.models import User
-from prescriptions.models import Prescription
+# from prescriptions.models import Prescription
 
 
 # Create your models here.
@@ -10,7 +10,7 @@ class PetProfile(models.Model):
     species = models.CharField(max_length=255)
     breed = models.CharField(max_length=255)
     date_of_birth = models.DateField(max_length=255)
-    prescriptions = models.ManyToManyField(Prescription)
+    # prescriptions = models.ManyToManyField(Prescription, through='Pet_Prescription')
 
 
 

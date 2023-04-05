@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from .models import PetProfile
 from .serializers import PetProfileSerializer
-from .models import Prescription
+from prescriptions.models import Prescription
 
 # Create your views here.
 
@@ -30,9 +30,10 @@ def pet_details(request, pk):
 def create_pet(request):
     if request.method == "POST":
         serializer = PetProfileSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save(user=request.user)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
