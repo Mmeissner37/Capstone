@@ -11,11 +11,10 @@ from .serializers import PrescritptionSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def get_all_prescriptions(request):
-    if request.method == 'GET':
-        drugs = Prescription.objects.all()
-        serializer = PrescritptionSerializer(drugs, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+def get_all_drugs(request):
+    drugs = Prescription.objects.all()
+    serializer = PrescritptionSerializer(drugs, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET', 'POST'])
