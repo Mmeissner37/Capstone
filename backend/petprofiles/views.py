@@ -31,7 +31,7 @@ def create_pet(request):
     if request.method == "POST":
         serializer = PetProfileSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=request.user, precription=request.prescription)
+        serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 @api_view(['PUT', 'DELETE'])

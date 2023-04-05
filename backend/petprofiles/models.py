@@ -10,7 +10,7 @@ class PetProfile(models.Model):
     species = models.CharField(max_length=255)
     breed = models.CharField(max_length=255)
     date_of_birth = models.DateField(max_length=255)
-    prescriptions = models.ForeignKey(Prescription, on_delete=models.CASCADE)
+    prescriptions = models.ManyToManyField(Prescription)
 
 
 

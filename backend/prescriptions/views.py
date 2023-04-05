@@ -23,7 +23,7 @@ def get_all_prescriptions(request):
 def pet_drug(request):
     drug = get_object_or_404(Prescription)
     if request.method == 'GET':
-        drug = Prescription.objects.filter(prescriptions=request.prescriptions)
+        drug = Prescription.objects.all()
         serializer = PrescritptionSerializer(drug, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
@@ -35,7 +35,7 @@ def pet_drug(request):
 
 @api_view(['PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
-def drug_alter (request, pk):
+def alter_drug (request, pk):
     drug = get_object_or_404(Prescription, pk=pk)
     if request.method == 'PUT':
         serializer = PrescritptionSerializer(drug, data=request.data)
