@@ -5,8 +5,8 @@ from .models import Pet_Prescription
 class Pet_PrescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet_Prescription
-        fields = ['id', 'pet', 'prescription', 'pet_id', 'prescription_id']
+        fields = ['id', 'pet_id', 'pet', 'prescription_id', 'prescription']
         depth = 1
 
-    prescriptions_id = serializers.IntegerField(write_only=True)
+    prescription_id = serializers.IntegerField(write_only=True)
     pet_id = serializers.IntegerField(write_only=True)

@@ -5,7 +5,6 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from .models import PetProfile
 from .serializers import PetProfileSerializer
-from prescriptions.models import Prescription
 
 # Create your views here.
 

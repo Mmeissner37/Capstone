@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from petprofiles.urls import path
 from prescriptions.urls import path 
+from pet_prescription.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('api/cars/', include('cars.urls')),
     path('pets/', include('petprofiles.urls')),
     path('drugs/', include('prescriptions.urls')),
+    path('both/', include('pet_prescription.urls'))
 ]
