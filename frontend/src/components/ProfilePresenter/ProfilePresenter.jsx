@@ -1,6 +1,12 @@
+import React, { useState } from 'react';
 
 
-const ProfilePresenter = ({profile}) => {
+
+
+const ProfilePresenter = () => {
+
+    const [profile, setProfile] = useState([]);
+
     return (
         <ul className="profile-presenter">
             Name: {profile.name}
@@ -10,3 +16,5 @@ const ProfilePresenter = ({profile}) => {
         </ul>
     )
 }
+
+export default ProfilePresenter;

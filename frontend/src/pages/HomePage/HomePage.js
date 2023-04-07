@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import ProfilePresenter from "../../components/ProfilePresenter/ProfilePresenter";
+import ProfileForm from "../../components/ProfileForm/ProfileForm";
 
 import axios from "axios";
 
@@ -29,6 +31,7 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
+      <ProfileForm />
       {cars &&
         cars.map((car) => (
           <p key={car.id}>
