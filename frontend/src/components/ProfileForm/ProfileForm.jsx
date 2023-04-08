@@ -1,58 +1,48 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import useCustomForm from "../../hooks/useCustomForm";
+import { useNavigate } from "react-router-dom";
 
 
-const ProfileForm = ({createNewProfile}) => {
+let initialValues = {
+    pet_name: "",
+    species: "",
+    breed: "",
+    date_of_birth: "",
+}
 
-    const [profile, setProfile] = useState([]);
-    const [pet_name, setName] = useState([]);
-    const [species, setSpecies] = useState([]);
-    const [breed, setBreed] = useState([]);
-    const [date_of_birth, setBirth] = useState([]);
+const ProfileForm = () => { 
     const [user, token] = useAuth()
+    const navigate = useNavigate()
+    const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues, createPet)
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        let newProfile = {
-            name: pet_name,
-            species: species,
-            breed: breed, 
-            birth: date_of_birth,
-        }
-        console.log(newProfile)
-        createPet(newProfile)
-    }
-
-    useEffect(() =>{
-        createPet();
-    }, []);
-
-    async function createPet(newProfile) {
+    async function createPet() {
         try {
-            let response = await axios.post('http://127.0.0.1:8000/pets/newpet/', newProfile, {
+            let response = await axios.post('http://127.0.0.1:8000/pets/newpet/', formData, {
                 headers: { 
                     Authorization: 'Bearer ' + token
                 }
             })
+            navigate("/profiles")
         } catch (error) {
             console.log(error.response.data)
         }
     }
 
     return ( 
-        <div>
-            <form>
-                <h3>Add Paw Prints To Your Heart!</h3>
-                <label className="pet-form">Pet Name:{" "}</label>
-                <input type='text' name={pet_name} onChange={(event) => setName(event.target.value)} /><br></br>
-                <label className="pet-form">Species:{" "}</label>
-                <input type="text" value={species} onChange={(event) => setSpecies(event.target.value)} /><br></br>
-                <label className="pet-form">Breed:{" "}</label>
-                <input type="text" value={breed} onChange={(event) => setBreed(event.target.value)} /><br></br>
-                <label className="pet-form">Date of Birth:{" "}</label>
-                <input type="date" value={date_of_birth} onChange={(event) => setBirth(event.target.value)} /><br></br>
-                <button onChange={handleSubmit}>Add PawPrints</button>
+        <div className="container-md">
+            <h3>Add Paw Prints To Your Heart!</h3>
+            <form className="form" onSubmit={handleSubmit}>
+                <label>Pet Name:{" "}
+                <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} /></label>
+                <label>Species:{" "}
+                <input type="text" name='species' value={formData.species} onChange={handleInputChange} /></label>
+                <label className="pet-form">Breed:{" "}
+                <input type="text" name='breed' value={formData.breed} onChange={handleInputChange} /></label>
+                <label className="pet-form">Date of Birth:{" "}
+                <input type="date" name='date_of_birth' value={formData.date_of_birth} onChange={handleInputChange} /></label>
+                <button>Add PawPrints</button>
             </form>
         </div>
      );
