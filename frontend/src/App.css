@@ -56,3 +56,10 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
 }
+ 
+.whole-page {
+  background-color: lightblue;
+  height: auto;
+  background-size: 100%;
+  background-repeat: repeat;
+}

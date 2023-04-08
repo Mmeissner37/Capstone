@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 
@@ -24,6 +24,10 @@ const ProfileForm = ({createNewProfile}) => {
         createPet(newProfile)
     }
 
+    useEffect(() =>{
+        createPet();
+    }, []);
+
     async function createPet(newProfile) {
         try {
             let response = await axios.post('http://127.0.0.1:8000/pets/newpet/', newProfile, {
@@ -40,13 +44,13 @@ const ProfileForm = ({createNewProfile}) => {
         <div>
             <form>
                 <h3>Add Paw Prints To Your Heart!</h3>
-                <label className="pet-form">Pet Name: </label>
-                <input type='text' value={pet_name} onChange={(event) => setName(event.target.value)} /><br></br>
-                <label className="pet-form">Species: </label>
+                <label className="pet-form">Pet Name:{" "}</label>
+                <input type='text' name={pet_name} onChange={(event) => setName(event.target.value)} /><br></br>
+                <label className="pet-form">Species:{" "}</label>
                 <input type="text" value={species} onChange={(event) => setSpecies(event.target.value)} /><br></br>
-                <label className="pet-form">Breed: </label>
+                <label className="pet-form">Breed:{" "}</label>
                 <input type="text" value={breed} onChange={(event) => setBreed(event.target.value)} /><br></br>
-                <label className="pet-form">Date of Birth: </label>
+                <label className="pet-form">Date of Birth:{" "}</label>
                 <input type="date" value={date_of_birth} onChange={(event) => setBirth(event.target.value)} /><br></br>
                 <button onChange={handleSubmit}>Add PawPrints</button>
             </form>

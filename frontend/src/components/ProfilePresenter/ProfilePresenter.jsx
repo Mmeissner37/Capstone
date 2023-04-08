@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 
 
-
 const ProfilePresenter = () => {
 
     const [profile, setProfile] = useState([]);
