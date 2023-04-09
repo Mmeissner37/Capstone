@@ -17,7 +17,7 @@ def get_all_profiles(request):
 
 
 @api_view(['GET'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def pet_details(request, pk):
     one_profile = get_object_or_404(PetProfile, pk=pk)
     if request.method == 'GET':

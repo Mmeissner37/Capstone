@@ -4,11 +4,9 @@ import useAuth from "../../hooks/useAuth";
 
 
 const ProfilePage = () => {
-    const [user, token] = useAuth()
 
     return ( 
-        <div className="container-md">
-            <h1>Hello {user.username}</h1>
+        <div className="container">
             <ProfilePresenter />
         </div>
      );

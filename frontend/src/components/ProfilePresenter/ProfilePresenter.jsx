@@ -25,10 +25,11 @@ const ProfilePresenter = () => {
 
     return (
         <div className='container'>
+            <h2>{user.username}'s Pets</h2>
             {pets &&
             pets.map((petprofile) =>
                 <p key={petprofile.id}>
-                    Name:{petprofile.pet_name}<br></br>
+                    Name: {petprofile.pet_name}<br></br>
                     Species: {petprofile.species}<br></br>
                     Breed: {petprofile.breed}<br></br>
                     Date of Birth: {petprofile.date_of_birth}<br></br>

@@ -9,7 +9,7 @@ from .serializers import Pet_PrescriptionSerializer
 # Create your views here.
 
 @api_view(['GET', 'POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def get_all(request):
     if request.method == 'GET':
         profile_drugs = Pet_Prescription.objects.all()
