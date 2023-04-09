@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 
-import AddPrescription from '../AddPrescription/AddPrescription';
 import AddPicture from '../AddPicture/AddPicture';
+import { Link } from 'react-router-dom';
 
 
 const ProfilePresenter = () => {
@@ -37,7 +37,7 @@ const ProfilePresenter = () => {
                         Species: {petprofile.species}<br></br>
                         Breed: {petprofile.breed}<br></br>
                         Date of Birth: {petprofile.date_of_birth}<br></br>
-                        <AddPrescription /><br></br>
+                        <Link to='/createdrug'>Add Prescriptions</Link>
                         <AddPicture />
                     </ul>)}
             </div>

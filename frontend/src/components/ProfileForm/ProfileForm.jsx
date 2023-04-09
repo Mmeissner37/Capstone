@@ -34,13 +34,13 @@ const ProfileForm = () => {
         <div className="container-md">
             <h3>Add Paw Prints To Your Heart!</h3>
             <form className="form" onSubmit={handleSubmit}>
-                <label>Pet Name:{" "}
+                <label>Pet Name: {" "}
                 <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} /></label>
-                <label>Species:{" "}
+                <label>Species: {" "}
                 <input type="text" name='species' value={formData.species} onChange={handleInputChange} /></label>
-                <label className="pet-form">Breed:{" "}
+                <label className="pet-form">Breed: {" "}
                 <input type="text" name='breed' value={formData.breed} onChange={handleInputChange} /></label>
-                <label className="pet-form">Date of Birth:{" "}
+                <label className="pet-form">Date of Birth: {" "}
                 <input type="date" name='date_of_birth' value={formData.date_of_birth} onChange={handleInputChange} /></label>
                 <button>Add PawPrints</button>
             </form>
