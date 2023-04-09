@@ -7,8 +7,9 @@ const ProfilePage = () => {
     const [user, token] = useAuth()
 
     return ( 
-        <div>
+        <div className="container-md">
             <h1>Hello {user.username}</h1>
+            <ProfilePresenter />
         </div>
      );
 }

@@ -1,18 +1,48 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import useAuth from '../../hooks/useAuth';
+import axios from 'axios';
 
 
 const ProfilePresenter = () => {
+    const [user, token] = useAuth();
+    const [pets, setPets] = useState([]);
 
-    const [profile, setProfile] = useState([]);
+    useEffect (() => {
+        const fetchPets = async() => {
+            try {
+                let response = await axios.get('http://127.0.0.1:8000/pets/', {
+                    headers: {
+                        Authorization: 'Bearer ' + token,
+                    },
+                });
+                setPets(response.data);
+            } catch (error) {
+                console.log(error.response.data)
+            }
+        };
+        fetchPets();
+    }, [token]);
 
     return (
-        <ul className="profile-presenter">
-            Name: {profile.name}
-            Species: {profile.species}
-            Breed: {profile.breed}
-            Date of Birth: {profile.date_of_birth}
-        </ul>
+        <div className='container'>
+            {pets &&
+            pets.map((petprofile) =>
+                <p key={petprofile.id}>
+                    Name:{petprofile.pet_name}<br></br>
+                    Species: {petprofile.species}<br></br>
+                    Breed: {petprofile.breed}<br></br>
+                    Date of Birth: {petprofile.date_of_birth}<br></br>
+                </p>)}
+        </div>
+
+    //    <div>
+    //      <ul className="profile-presenter">
+    //         Name: {petProfiles.pet_name}<br></br>
+    //         Species: {petProfiles.species}<br></br>
+    //         Breed: {petProfiles.breed}<br></br>
+    //         Date of Birth: {petProfiles.date_of_birth}<br></br>
+    //     </ul>
+    //    </div>
     )
 }
 

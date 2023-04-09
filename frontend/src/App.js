@@ -21,21 +21,13 @@ function App() {
       <Navbar />
       <div className="whole-page">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <PrivateRoute>
-                <HomePage />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>}/>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         </Routes>
-        <Footer />
       </div>
-
+      <Footer />
     </div>
   );
 }

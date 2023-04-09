@@ -1,6 +1,5 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
-import ProfilePresenter from "../../components/ProfilePresenter/ProfilePresenter";
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
 
 
@@ -13,7 +12,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>Home Page for {user.username}!</h1>
+      <h1>Home Page for {user.username}!</h1><br></br>
       <ProfileForm />
     </div>
   );
