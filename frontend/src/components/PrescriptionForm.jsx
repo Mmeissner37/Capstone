@@ -44,6 +44,7 @@ const AddPrescription = () => {
                 <input type='text' name='drug_instr' value={formData.drug_instr} onChange={handleInputChange}/></label><br></br>         
                 <button>Add Medication</button>
             </form>
+            <Link to="/profiles">Go Back</Link>
         </div>
      );
 }

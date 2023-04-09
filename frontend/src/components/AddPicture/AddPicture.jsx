@@ -5,8 +5,8 @@ const AddPicture = (props) => {
     return ( 
         <div>
             <form>
-                <label>Add Profile Picture: 
-                <input type="text" value='url' /></label>
+                <label className="profile-picture">Add Profile Picture: 
+                <input type="file" name='profile-pic' /></label>
                 <button>Add Picture</button>
             </form>
         </div>
