@@ -9,9 +9,9 @@ from .serializers import PetProfileSerializer
 # Create your views here.
 
 @api_view(['GET'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def get_all_profiles(request):
-    profiles = PetProfile.objects.all()
+    profiles = PetProfile.objects.filter(user_id=request.user.id)
     serializer = PetProfileSerializer(profiles, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
