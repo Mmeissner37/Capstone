@@ -10,6 +10,8 @@ class PetProfile(models.Model):
     species = models.CharField(max_length=255)
     breed = models.CharField(max_length=255)
     date_of_birth = models.DateField(max_length=255)
+    # picture = models.ImageField()
+    
     # prescriptions = models.ManyToManyField(Prescription, through='Pet_Prescription')
 
 

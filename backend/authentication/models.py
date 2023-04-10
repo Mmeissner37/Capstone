@@ -5,7 +5,6 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     is_owner = models.BooleanField('owner status', default=True)
-    is_vet = models.BooleanField('owner status', default=False)
 
 
     '''
