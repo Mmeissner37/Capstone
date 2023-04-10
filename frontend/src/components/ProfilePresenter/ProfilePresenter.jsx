@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import AddPicture from '../AddPicture/AddPicture';
 import { Link } from 'react-router-dom';
+import PrescriptionPresenter from '../PrescriptionPresenter';
 
 
 const ProfilePresenter = () => {
@@ -37,6 +38,7 @@ const ProfilePresenter = () => {
                         Species: {petprofile.species}<br></br>
                         Breed: {petprofile.breed}<br></br>
                         Date of Birth: {petprofile.date_of_birth}<br></br>
+                        <PrescriptionPresenter />
                         <Link to='/createdrug'>Add Prescriptions</Link>
                         <AddPicture />
                     </ul>)}
