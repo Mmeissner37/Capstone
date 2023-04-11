@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 
 
@@ -6,6 +6,7 @@ function AddPicture () {
     const [file, setFile] = useState();
 
     function handleChange(event) {
+        event.preventDefault();
         console.log(event.target.files);
         setFile(URL.createObjectURL(event.target.files[0]));
     }
@@ -20,4 +21,4 @@ function AddPicture () {
 
 }
 
-export default AddPicture;
+export default AddPicture; 

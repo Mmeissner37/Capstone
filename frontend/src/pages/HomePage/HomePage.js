@@ -12,12 +12,23 @@ const HomePage = () => {
 
 
   return (
-    <div className="container">
-      <h1>Home Page for {user.username}!</h1><br></br>
-      <ProfileForm />
-      <Link to="/profiles">See Pets</Link>
+    <div>
+      <div className="container-home">
+        <h1>Home Page for {user.username}!</h1><br></br>
+        <div>
+          <a href="/profiles">
+            <h4>See Profiles</h4>
+            <img src="../../assets/Romeow.jpg" height='100px' width='50px' alt="cat" />
+          </a>
+        </div>
+      </div>
+      <ProfileForm /><br></br>
+      {/* <div className="profile-link">
+        <Link to="/profiles">See Pets</Link>
+      </div><br></br> */}
       <Calendar />
     </div>
+
   );
 };
 

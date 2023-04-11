@@ -10,7 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", sans-serif;
 }
 
 p {
@@ -40,6 +40,16 @@ button:hover {
   text-align: left;
 }
 
+.container-home, .container-right {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+
 .form {
   align-items: left;
   display: flex;
@@ -58,14 +68,15 @@ button:hover {
 }
  
 .whole-page {
-  background-color: lightblue;
+  background-color: rgb(118, 209, 245);
   height: auto;
   background-size: 100%;
   background-repeat: repeat;
+  color: white;
 }
 
 .calendar {
-  background-color: white;
+  background-color: black;
 }
 
 
