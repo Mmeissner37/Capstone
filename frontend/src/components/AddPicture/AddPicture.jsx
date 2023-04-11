@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import useCustomForm from '../../hooks/useCustomForm';
 
 
 
-const AddPicture = (props) => {
-    return ( 
-        <div>
-            <form>
-                <label className="profile-picture">Add Profile Picture: 
-                <input type="file" name='profile-pic' /></label>
-                <button>Add Picture</button>
-            </form>
+function AddPicture () {
+    const [file, setFile] = useState();
+
+    function handleChange(event) {
+        console.log(event.target.files);
+        setFile(URL.createObjectURL(event.target.files[0]));
+    }
+
+    return (
+        <div className='pictures'>
+            <h4>Add Profile Picture: </h4>
+            <input type='file' onChange={handleChange} />
+            <img src={file} height='200px' width='150px' />
         </div>
-     );
+    )
+
 }
- 
+
 export default AddPicture;

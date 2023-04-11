@@ -38,8 +38,10 @@ const ProfilePresenter = () => {
                         Species: {petprofile.species}<br></br>
                         Breed: {petprofile.breed}<br></br>
                         Date of Birth: {petprofile.date_of_birth}<br></br>
-                        <PrescriptionPresenter />
-                        <Link to='/createdrug'>Add Prescriptions</Link>
+                        Medications: {petprofile.prescripton}<br></br>
+                        {/* <PrescriptionPresenter /> */}
+                        {/* These links are for all the pets!! */}
+                        <Link to='/createdrug'>Add Prescriptions</Link> 
                         <AddPicture />
                     </ul>)}
             </div>

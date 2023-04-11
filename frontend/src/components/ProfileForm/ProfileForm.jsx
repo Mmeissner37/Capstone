@@ -31,7 +31,7 @@ const ProfileForm = () => {
     }
 
     return ( 
-        <div className="container-md">
+        <div className="container">
             <h3>Add Paw Prints To Your Heart!</h3>
             <form className="form" onSubmit={handleSubmit}>
                 <label>Pet Name: {" "}

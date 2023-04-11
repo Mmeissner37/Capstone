@@ -37,11 +37,11 @@ button:hover {
   margin: 0 auto;
   max-width: 600px;
   overflow: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .form {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -50,7 +50,7 @@ button:hover {
 
 .form input {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 25px;
   margin: 5px;
   padding: 3px 7px;
@@ -63,4 +63,9 @@ button:hover {
   background-size: 100%;
   background-repeat: repeat;
 }
+
+.calendar {
+  background-color: white;
+}
+
 
