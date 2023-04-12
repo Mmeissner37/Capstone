@@ -41,7 +41,7 @@ button:hover {
 }
 
 .container-home, .container-right {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

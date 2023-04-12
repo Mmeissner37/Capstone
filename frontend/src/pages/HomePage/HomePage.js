@@ -4,6 +4,7 @@ import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import { Link } from "react-router-dom";
 import Calendar from "../../components/Calendar";
 
+
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
@@ -18,7 +19,7 @@ const HomePage = () => {
         <div>
           <a href="/profiles">
             <h4>See Profiles</h4>
-            <img src="../../assets/Romeow.jpg" height='100px' width='50px' alt="cat" />
+            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="cat" />
           </a>
         </div>
       </div>
