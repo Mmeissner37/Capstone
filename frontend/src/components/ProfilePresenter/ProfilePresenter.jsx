@@ -41,7 +41,7 @@ const ProfilePresenter = () => {
                         Medications: {petprofile.prescripton}<br></br>
                         {/* <PrescriptionPresenter /> */}
                         {/* These links are for all the pets!! */}
-                        <Link to='/createdrug'>Add Prescriptions</Link> 
+                        <Link to='/createdrug'>Add Medications</Link> 
                         <AddPicture />
                     </ul>)}
             </div>

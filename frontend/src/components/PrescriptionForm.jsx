@@ -20,7 +20,7 @@ const AddPrescription = () => {
 
     async function createDrug() {
         try {
-            let response = await axios.post('http://127.0.0.1:8000/both/all/', formData, {
+            let response = await axios.post('http://127.0.0.1:8000/drugs/make/', formData, {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
