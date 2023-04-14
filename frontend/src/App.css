@@ -41,12 +41,12 @@ button:hover {
 }
 
 .container-home, .container-right {
-  align-items: left;
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
   gap: 1rem;
+  margin-left: 12rem;
 }
 
 
@@ -75,8 +75,7 @@ button:hover {
   color: white;
 }
 
-.DemoApp {
+
+.calendar {
   background-color: black;
 }
-
-
