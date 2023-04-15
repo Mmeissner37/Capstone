@@ -32,7 +32,7 @@ const ProfileForm = () => {
 
     return ( 
         <div className="container">
-            <h3>Add Paw Prints To Your Heart!</h3>
+            <h3>Add New Pets!</h3><br></br>
             <form className="form" onSubmit={handleSubmit}>
                 <label>Pet Name: {" "}
                 <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} /></label>

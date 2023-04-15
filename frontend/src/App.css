@@ -19,8 +19,8 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: 2px solid black;
+  color: white;
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -40,15 +40,15 @@ button:hover {
   text-align: left;
 }
 
-.container-home, .container-right {
+.container-home {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-left: 12rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
-
 
 .form {
   align-items: left;
@@ -69,13 +69,15 @@ button:hover {
  
 .whole-page {
   background-color: rgb(118, 209, 245);
+  background-image: url(https://as2.ftcdn.net/v2/jpg/04/04/40/49/1000_F_404404954_WGYZtTwswIrXnJl6qVeEFK5UWPFflVB8.jpg);
   height: auto;
   background-size: 100%;
   background-repeat: repeat;
   color: white;
 }
 
-
 .calendar {
   background-color: black;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }

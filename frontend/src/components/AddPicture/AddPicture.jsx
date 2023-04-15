@@ -18,7 +18,6 @@ function AddPicture () {
             <img src={file} height='200px' width='150px' />
         </div>
     )
-
 }
 
 export default AddPicture; 
