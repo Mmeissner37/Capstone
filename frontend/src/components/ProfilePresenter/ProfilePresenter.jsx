@@ -44,7 +44,6 @@ const ProfilePresenter = () => {
                         <Link to='/createdrug'>Add Medications</Link> 
                         <AddPicture />                    
                     </ul>)}<br></br>
-            <PrescriptionPresenter />
             </div>
         </div>
     )

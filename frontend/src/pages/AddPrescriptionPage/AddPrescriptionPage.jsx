@@ -3,6 +3,8 @@ import useAuth from '../../hooks/useAuth';
 import useCustomForm from '../../hooks/useCustomForm';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import PrescriptionPresenter from '../../components/PrescriptionPresenter';
+import { Link } from 'react-router-dom';
 
 
 let initialValues= {
@@ -24,7 +26,7 @@ const AddPrescriptionPage = () => {
                     Authorization: 'Bearer ' + token
                 }
             })
-            navigate('/profiles')
+            navigate('/createdrug')
         } catch (error) {
             console.log(error.message)
         }
@@ -48,6 +50,14 @@ const AddPrescriptionPage = () => {
                 </label>
                 <button>Add Medication</button>
             </form>
+            <div>
+                <PrescriptionPresenter />
+            </div>
+            <br></br>
+            <a href="/profiles">
+              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="cat" />
+            </a>
+            <h5>Go Back To Profiles</h5>
         </div>
      );
 }

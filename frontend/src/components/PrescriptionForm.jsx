@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
+import PrescriptionPresenter from './PrescriptionPresenter';
 
 
 let initialValues= {
@@ -25,7 +26,7 @@ const AddPrescription = () => {
                     Authorization: 'Bearer ' + token
                 }
             })
-            navigate('/')
+            navigate('/profiles')
         } catch (error) {
             console.log(error.response.data)
         }
@@ -46,7 +47,7 @@ const AddPrescription = () => {
                 <input type='text' name='drug_instr' value={formData.drug_instr} onChange={handleInputChange}/></label><br></br>         
                 <br></br>
                 <br></br>
-                <button>Add Medication</button>
+                <button>Add Medication</button> <Link to="/createdrug">Go To Prescriptions</Link>
             </form><br></br>
         </div>
      );
