@@ -29,7 +29,7 @@ const ProfilePresenter = () => {
 
     return (
         <div className='container'>
-            <h2>{user.username}'s Pets</h2>
+            <h2>{user.username}'s Pets</h2><br></br>
             <div className='profiles'>
                 {pets &&
                 pets.map((petprofile) =>
@@ -38,23 +38,14 @@ const ProfilePresenter = () => {
                         Species: {petprofile.species}<br></br>
                         Breed: {petprofile.breed}<br></br>
                         Date of Birth: {petprofile.date_of_birth}<br></br>
-                        Medications: {petprofile.prescripton}<br></br>
+                        Medications: {petprofile.prescription}<br></br>
                         {/* <PrescriptionPresenter /> */}
-                        {/* These links are for all the pets!! */}
                         <Link to='/createdrug'>Add Medications</Link> 
-                        <AddPicture />
-                    </ul>)}
+                        <AddPicture />                    
+                    </ul>)}<br></br>
+
             </div>
         </div>
-
-    //    <div>
-    //      <ul className="profile-presenter">
-    //         Name: {petProfiles.pet_name}<br></br>
-    //         Species: {petProfiles.species}<br></br>
-    //         Breed: {petProfiles.breed}<br></br>
-    //         Date of Birth: {petProfiles.date_of_birth}<br></br>
-    //     </ul>
-    //    </div>
     )
 }
 

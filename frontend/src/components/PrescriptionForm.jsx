@@ -25,7 +25,7 @@ const AddPrescription = () => {
                     Authorization: 'Bearer ' + token
                 }
             })
-            navigate('/profiles')
+            navigate('/')
         } catch (error) {
             console.log(error.response.data)
         }
@@ -34,17 +34,20 @@ const AddPrescription = () => {
 //Note to self!! Name item doesn't work--FIX THIS!!
     return ( 
         <div className='container-md'>
-            <h3>Add Medications to {petProfile.pet_name} </h3> 
+            <h3>Add Medications to Account</h3><br></br>
             <form className='drug-form' onSubmit={handleSubmit}>
                 <label>Drug Name: {" "}
                 <input type='text' name='drug_name' value={formData.drug_name} onChange={handleInputChange}/></label><br></br>
+                <br></br>
                 <label>Drug Dose: {" "}
                 <input type='text' name='drug_dose' value={formData.drug_dose} onChange={handleInputChange}/></label><br></br>
+                <br></br>
                 <label>Drug Instructions: {" "}
                 <input type='text' name='drug_instr' value={formData.drug_instr} onChange={handleInputChange}/></label><br></br>         
+                <br></br>
+                <br></br>
                 <button>Add Medication</button>
-            </form>
-            <Link to="/profiles">Go Back</Link>
+            </form><br></br>
         </div>
      );
 }

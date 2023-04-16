@@ -10,7 +10,7 @@ const PrescriptionPresenter = () => {
     useEffect (() => {
         const fetchMeds = async() => {
             try {
-                let response = await axios.get('http://127.0.0.1:8000/both/all/', {
+                let response = await axios.get('http://127.0.0.1:8000/drugs/', {
                     headers: {
                         Authorization: 'Bearer ' + token,
                     },
@@ -27,16 +27,23 @@ const PrescriptionPresenter = () => {
         <div className='container'>
             <div className='petdrugs'>
                 {meds && 
-                meds.filter((pet_prescription) =>
-                    <ul key={pet_prescription.id}>
-                        Pet Name: {pet_prescription.pet_name}<br></br>
-                        Prescription: {pet_prescription.prescription}<br></br>
+                meds.filter((prescription) =>
+                    <ul key={prescription.id}>
+                        Drug Name: {prescription.drug_name}<br></br>
+                        Drug Dose: {prescription.drug_dose}<br></br>
+                        Drug Instructions: {prescription.drug_instr}<br></br>
                     </ul>
                 )}
             </div>
-
         </div>
      );
 }
- 
+
 export default PrescriptionPresenter;
+
+
+// {pets &&
+//     pets.map((petprescription) =>
+//     <ul key={petprescription.id}>
+//         Medications: {petprescription.prescripton}<br></br>
+//     </ul>)}

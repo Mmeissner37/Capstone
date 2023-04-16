@@ -3,6 +3,8 @@ import useAuth from "../../hooks/useAuth";
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import { Link } from "react-router-dom";
 import { MyCalendar } from "../../components/Calendar";
+import PrescriptionForm from '../../components/PrescriptionForm';
+
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -17,8 +19,8 @@ const HomePage = () => {
         <div className="container-home">
           <h1>Home Page for {user.username}!</h1><br></br>
           <div>
+            <h4>See Profiles</h4>
             <a href="/profiles">
-              <h4>See Profiles</h4>
               <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="cat" />
             </a>
           </div>
@@ -26,9 +28,9 @@ const HomePage = () => {
       </div>
       <div className="container-md">
         <ProfileForm /><br></br>
-        {/* <div className="profile-link">
-          <Link to="/profiles">See Pets</Link>
-        </div><br></br> */}
+      </div>
+      <div className="container-meds">
+        <PrescriptionForm />
       </div>
       <MyCalendar />
     </div>

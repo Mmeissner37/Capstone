@@ -3,24 +3,37 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from "@fullcalendar/interaction";
+import useAuth from '../hooks/useAuth';
 
 
 export const MyCalendar = () => {
     const [events, setEvents] = useState([]);
+    const [user, token]= useAuth();
 
     const eventClick = (info) => {
         const {start, end} = info;
-        const eventNamePrompt = prompt('Enter, event name');
+        const eventNamePrompt = prompt('Please enter appointment details here including pet name and reason for visit');
         if (eventNamePrompt) {
             setEvents([...events, 
                 {
                     start,
                     end,
                     title: eventNamePrompt,
+                    duration: '00:30',
                 },
             ]);
         }
     };
+
+    const EventItem = ({info}) => {
+        const {event} = info;
+        return(
+            <div>
+                <p>{event.title}</p>
+            </div>
+        );
+    };
+
 
     return (
         <div className="calendar">
@@ -39,44 +52,15 @@ export const MyCalendar = () => {
                 start: '10:00',
                 end: '16:00',
             }}
+            eventContent={(info) => <EventItem info={info} />}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]} 
-            views={['dayGridMonth', 'dayGridWeek', 'dayGridDay']}
+            views={['dayGridWeek', 'dayGridDay','dayGridMonth']}
 
             />
         </div>
     )
 }
 
-
-// export const MyCalendar = () => {
-//       return (
-//         <div className="calendar">
-//             <FullCalendar
-//                 plugins={[ dayGridPlugin, interactionPlugin, timeGridPlugin ]}
-//                 initialView="dayGridMonth"
-//                 weekends={true}
-//                 eventContent={this.render.eventContent}
-//                 viewHeight={690}
-//                 aspectRatio={2}
-//                 eventBackgroundColor="yellow"
-//                 headerToolbar={
-//                     {
-//                         start: 'today prev,next', // will normally be on the left. if RTL, will be on the right
-//                         center: 'title',
-//                         end: 'dayGridMonth,timeGridWeek,timeGridDay' // will normally be on the right. if RTL, will be on the left
-//                     }
-//                 }
-//                 businessHours={
-//                     {
-//                         daysOfWeek: [1, 2, 3, 4],
-//                         start: '10:00',
-//                         end: '16:00',
-//                     }
-//                 }
-//             />
-//         </div>
-//       )
-//     }
 
 
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PrescriptionForm from '../../components/PrescriptionForm';
 import useAuth from '../../hooks/useAuth';
 import useCustomForm from '../../hooks/useCustomForm';
 import { useNavigate } from 'react-router-dom';
@@ -31,7 +30,7 @@ const AddPrescriptionPage = () => {
 
     return ( 
         <div className='container'>
-            <h2>Enter New Medications</h2>
+            <h2>Enter New Medications</h2><br></br>
             {/* <form className='form' onSubmit={handleSubmit}>
                 <label>Pet's Name: {''}
                     <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} />
@@ -41,7 +40,7 @@ const AddPrescriptionPage = () => {
                 </label>
                 <button>Add Medication</button>
             </form> */}
-            <PrescriptionForm />
+            {/* <PrescriptionForm /> */}
         </div>
      );
 }
