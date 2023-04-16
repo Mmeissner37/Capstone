@@ -16,22 +16,25 @@ const HomePage = () => {
   return (
     <div>
       <div className="container-md">
-        <div className="container-home">
+        <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
-          <div>
-            <h4>See Profiles</h4>
-            <a href="/profiles">
-              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="cat" />
-            </a>
+          <h4>See Profiles</h4>
+          <a href="/profiles">
+            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="cat" />
+          </a>
+        </div>
+        <div className="homepage">
+          <div className="profileform">
+            <ProfileForm />
+          </div>
+          <div className="drugform">
+            <PrescriptionForm />
           </div>
         </div>
       </div>
-      <div className="container-md">
-        <ProfileForm /><br></br>
-      </div>
-      <div className="container-meds">
-        <PrescriptionForm />
-      </div>
+      {/* <div className="container-md">
+
+      </div> */}
       <MyCalendar />
     </div>
 

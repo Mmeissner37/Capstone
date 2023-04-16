@@ -42,7 +42,7 @@ const ProfileForm = () => {
                 <input type="text" name='breed' value={formData.breed} onChange={handleInputChange} /></label>
                 <label className="pet-form">Date of Birth: {" "}
                 <input type="date" name='date_of_birth' value={formData.date_of_birth} onChange={handleInputChange} /></label>
-                <button>Add PawPrints</button>
+                <button>Add PawPrints</button><br></br>
             </form>
         </div>
      );

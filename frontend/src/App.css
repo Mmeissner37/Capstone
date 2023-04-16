@@ -20,7 +20,7 @@ p {
 button {
   background-color: transparent;
   border: 2px solid black;
-  color: white;
+  color: black;
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -30,7 +30,7 @@ button {
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: steelblue;
+  background-color: rgb(69, 177, 69);
 }
 
 .container {
@@ -41,10 +41,15 @@ button:hover {
   padding-top: 1rem;
 }
 
-.container-home {
+.container-header {
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+}
+
+.container-home {
+  align-items: auto;
+  display: center;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding-top: 1rem;
@@ -81,15 +86,27 @@ button:hover {
  
 .whole-page {
   background-color: rgb(118, 209, 245);
-  background-image: url(https://as2.ftcdn.net/v2/jpg/04/04/40/49/1000_F_404404954_WGYZtTwswIrXnJl6qVeEFK5UWPFflVB8.jpg);
+  background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
   height: auto;
-  background-size: 100%;
+  background-size: 70%;
   background-repeat: repeat;
-  color: white;
+  color: black;
 }
 
 .calendar {
-  background-color: black;
+  background-color: white;
   margin-left: 5rem;
   margin-right: 5rem;
 }
+
+.homepage {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: solid black;
+  border-bottom: solid black;
+}
+
