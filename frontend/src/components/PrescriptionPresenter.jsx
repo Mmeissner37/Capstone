@@ -27,8 +27,9 @@ const PrescriptionPresenter = () => {
         <div className='container'>
             <div className='petdrugs'>
                 {meds && 
-                meds.filter((prescription) =>
+                meds.map((prescription) =>
                     <ul key={prescription.id}>
+                        ID: {prescription.id}<br></br>
                         Drug Name: {prescription.drug_name}<br></br>
                         Drug Dose: {prescription.drug_dose}<br></br>
                         Drug Instructions: {prescription.drug_instr}<br></br>

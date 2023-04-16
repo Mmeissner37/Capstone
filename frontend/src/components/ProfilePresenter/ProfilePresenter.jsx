@@ -34,6 +34,7 @@ const ProfilePresenter = () => {
                 {pets &&
                 pets.map((petprofile) =>
                     <ul key={petprofile.id}>
+                        ID: {petprofile.id}<br></br>
                         Name: {petprofile.pet_name}<br></br>
                         Species: {petprofile.species}<br></br>
                         Breed: {petprofile.breed}<br></br>
@@ -43,7 +44,7 @@ const ProfilePresenter = () => {
                         <Link to='/createdrug'>Add Medications</Link> 
                         <AddPicture />                    
                     </ul>)}<br></br>
-
+            <PrescriptionPresenter />
             </div>
         </div>
     )

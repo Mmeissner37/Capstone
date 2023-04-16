@@ -6,8 +6,10 @@ import axios from 'axios';
 
 
 let initialValues= {
-    petName: "",
-    prescription: "",
+    pet_id: " ",
+    pet_name: " ",
+    prescription_id: " ",
+    prescription: " ",
 }
 
 const AddPrescriptionPage = () => {
@@ -31,16 +33,21 @@ const AddPrescriptionPage = () => {
     return ( 
         <div className='container'>
             <h2>Enter New Medications</h2><br></br>
-            {/* <form className='form' onSubmit={handleSubmit}>
-                <label>Pet's Name: {''}
+            <form className='form' onSubmit={handleSubmit}>
+                <label>Pet's ID: {' '}
+                    <input type='text' name='pet_id' value={formData.pet_id} onChange={handleInputChange} />
+                </label>Pet's Name: {' '}
+                <label>
                     <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} />
                 </label>
-                <label>Medication: {''}
-                    <input type='text' name='prescripton' value={formData.drug_name} onChange={handleInputChange} />
+                <label>Medication ID: {' '}
+                    <input type='text' name="prescription_id" value={formData.prescription_id} onChange={handleInputChange} />
+                </label>
+                <label>Medication: {' '}
+                    <input type='text' name="prescription" value={formData.prescription} onChange={handleInputChange} />
                 </label>
                 <button>Add Medication</button>
-            </form> */}
-            {/* <PrescriptionForm /> */}
+            </form>
         </div>
      );
 }
