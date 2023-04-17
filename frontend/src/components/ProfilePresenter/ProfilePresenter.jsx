@@ -4,7 +4,8 @@ import axios from 'axios';
 
 import AddPicture from '../AddPicture/AddPicture';
 import { Link } from 'react-router-dom';
-import PrescriptionPresenter from '../PrescriptionPresenter';
+import PetDrugs from '../PetDrugs';
+import AddDrug from '../AddDrug';
 
 
 const ProfilePresenter = () => {
@@ -29,24 +30,33 @@ const ProfilePresenter = () => {
 
     return (
         <div className='container'>
-            <h2>{user.username}'s Pets</h2><br></br>
+            <div className='profile-header'>
+                <h2>{user.username}'s Pets</h2><br></br>
+            </div>
             <div className='profiles'>
                 {pets &&
                 pets.map((petprofile) =>
                     <ul key={petprofile.id}>
-                        ID: {petprofile.id}<br></br>
-                        Name: {petprofile.pet_name}<br></br>
-                        Species: {petprofile.species}<br></br>
-                        Breed: {petprofile.breed}<br></br>
-                        Date of Birth: {petprofile.date_of_birth}<br></br>
-                        Medications: {petprofile.prescription}<br></br>
-                        {/* <PrescriptionPresenter /> */}
-                        <Link to='/createdrug'>Add Medications</Link> 
-                        <AddPicture />                    
+                        <div className='present-profile'>
+                            <AddPicture />
+                            ID: {petprofile.id}<br></br>
+                            Name: {petprofile.pet_name}<br></br>
+                            Species: {petprofile.species}<br></br>
+                            Breed: {petprofile.breed}<br></br>
+                            Date of Birth: {petprofile.date_of_birth}<br></br>
+                            Medications: 
+                            <PetDrugs petID={petprofile.id} />
+                            {/* <AddDrug /> */}
+                            <br></br>
+                        </div>
                     </ul>)}<br></br>
+
             </div>
         </div>
     )
 }
 
 export default ProfilePresenter;
+
+
+// <Link to='/createdrug'>Add Medications</Link> 

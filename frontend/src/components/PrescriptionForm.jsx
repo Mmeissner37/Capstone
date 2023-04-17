@@ -32,7 +32,6 @@ const AddPrescription = () => {
         }
     }
 
-//Note to self!! Name item doesn't work--FIX THIS!!
     return ( 
         <div className='container-md'>
             <h3>Add Medications to Account</h3><br></br>
@@ -47,7 +46,7 @@ const AddPrescription = () => {
                 <input type='text' name='drug_instr' value={formData.drug_instr} onChange={handleInputChange}/></label><br></br>         
                 <br></br>
                 <br></br>
-                <button>Add Medication</button> <Link to="/createdrug">Go To Prescriptions</Link>
+                <button>Add Medication</button> <Link to="/createdrug">Go To Current Prescriptions</Link>
             </form><br></br>
         </div>
      );

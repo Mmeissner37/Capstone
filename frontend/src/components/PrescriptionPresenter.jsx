@@ -29,6 +29,7 @@ const PrescriptionPresenter = () => {
                 {meds && 
                 meds.map((prescription) =>
                     <ul key={prescription.id}>
+                        <br></br>
                         ID: {prescription.id}<br></br>
                         Drug Name: {prescription.drug_name}<br></br>
                         Drug Dose: {prescription.drug_dose}<br></br>

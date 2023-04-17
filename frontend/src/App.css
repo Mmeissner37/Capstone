@@ -56,7 +56,7 @@ button:hover {
   padding-bottom: 0.5rem;
 }
 
-.container-meds {
+/* .container-meds {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ button:hover {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-
+ */
 
 .form {
   align-items: left;
@@ -77,8 +77,8 @@ button:hover {
 
 .form input {
   display: block;
-  width: 50%;
-  height: 25px;
+  width: 85%;
+  height: 20px;
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
@@ -88,7 +88,7 @@ button:hover {
   background-color: rgb(118, 209, 245);
   background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
   height: auto;
-  background-size: 70%;
+  background-size: 80%;
   background-repeat: repeat;
   color: black;
 }
@@ -97,6 +97,7 @@ button:hover {
   background-color: white;
   margin-left: 5rem;
   margin-right: 5rem;
+  align-items: fixed;
 }
 
 .homepage {
@@ -110,3 +111,21 @@ button:hover {
   border-bottom: solid black;
 }
 
+.petdrugs {
+  text-align: left;
+  font-size: small;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.present-profile {
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 2rem;
+  background-color: rgb(228, 222, 222);
+}

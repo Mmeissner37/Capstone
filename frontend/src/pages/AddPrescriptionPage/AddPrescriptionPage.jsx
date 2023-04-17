@@ -55,7 +55,7 @@ const AddPrescriptionPage = () => {
             </div>
             <br></br>
             <a href="/profiles">
-              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="cat" />
+              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
             </a>
             <h5>Go Back To Profiles</h5>
         </div>

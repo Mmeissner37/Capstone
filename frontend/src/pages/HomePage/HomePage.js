@@ -1,7 +1,6 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
-import { Link } from "react-router-dom";
 import { MyCalendar } from "../../components/Calendar";
 import PrescriptionForm from '../../components/PrescriptionForm';
 
@@ -20,7 +19,7 @@ const HomePage = () => {
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>
           <a href="/profiles">
-            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="cat" />
+            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="paw print" />
           </a>
         </div>
         <div className="homepage">
@@ -32,9 +31,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container-md">
-
-      </div> */}
       <MyCalendar />
     </div>
 
