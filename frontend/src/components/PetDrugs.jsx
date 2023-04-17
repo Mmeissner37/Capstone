@@ -18,13 +18,14 @@ const PetDrugs = (props) => {
                     },
                 });
                 setPetDrugs(response.data)
-                filterDrugs();
             } catch (error) {
                 console.log(error.response.data)
             }
         };
         fetchDrugs();
     }, [token]);
+
+    useEffect (() => filterDrugs(), [petDrugs])
 
     function filterDrugs(){
         let filteredDrugs = petDrugs.filter((el) => {
@@ -39,8 +40,14 @@ const PetDrugs = (props) => {
     //filter.includes(pet_prescription.pet_id).map(pet_prescription)
 
     return ( 
-        <div className='petdrugs'>
-            {filteredDrugs[0] ? filteredDrugs.map(el => {return(<ul><li>Drug Name: {el.prescription.drug_name}</li><li>Drug Dose: {el.prescription.drug_dose}</li><li>Drug Instructions: {el.prescription.drug_instr}</li></ul>)}) : "No current medications"}
+        <div className="container-md">
+            <div className='showprofiledrugs'>
+                {filteredDrugs[0] ? filteredDrugs.map(el => {return(<ol className='profiledrugs'>
+                    <li>Drug Name: {el.prescription.drug_name}</li>
+                    <li>Drug Dose: {el.prescription.drug_dose}</li>
+                    <li>Drug Instructions: {el.prescription.drug_instr}</li><br></br>
+                    </ol>)}) : "No current medications"}
+            </div>
         </div>
      );
 }

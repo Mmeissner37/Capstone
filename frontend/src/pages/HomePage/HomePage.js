@@ -19,7 +19,7 @@ const HomePage = () => {
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>
           <a href="/profiles">
-            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='100px' width='100px' alt="paw print" />
+            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='75px' width='75px' alt="paw print" />
           </a>
         </div>
         <div className="homepage">

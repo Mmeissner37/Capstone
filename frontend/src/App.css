@@ -30,7 +30,7 @@ button {
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(69, 177, 69);
+  background-color: steelblue;
 }
 
 .container {
@@ -77,13 +77,13 @@ button:hover {
 
 .form input {
   display: block;
-  width: 85%;
+  width: 70%;
   height: 20px;
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
 }
- 
+
 .whole-page {
   background-color: rgb(118, 209, 245);
   background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
@@ -112,6 +112,7 @@ button:hover {
 }
 
 .petdrugs {
+  background-color: rgb(228, 222, 222);
   text-align: left;
   font-size: small;
 }
@@ -129,3 +130,10 @@ button:hover {
   gap: 2rem;
   background-color: rgb(228, 222, 222);
 }
+
+.showprofiledrugs {
+  font-size: smaller;
+  text-align: left;
+}
+
+

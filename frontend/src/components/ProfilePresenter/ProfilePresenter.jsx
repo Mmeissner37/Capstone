@@ -46,11 +46,10 @@ const ProfilePresenter = () => {
                             Date of Birth: {petprofile.date_of_birth}<br></br>
                             Medications: 
                             <PetDrugs petID={petprofile.id} />
-                            {/* <AddDrug /> */}
                             <br></br>
                         </div>
                     </ul>)}<br></br>
-
+                <AddDrug />
             </div>
         </div>
     )
