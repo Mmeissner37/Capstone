@@ -6,6 +6,7 @@ import AddPicture from '../AddPicture/AddPicture';
 import { Link } from 'react-router-dom';
 import PetDrugs from '../PetDrugs';
 import AddDrug from '../AddDrug';
+import CreateImage from '../CreateImageForm';
 
 
 const ProfilePresenter = () => {
@@ -36,9 +37,9 @@ const ProfilePresenter = () => {
             <div className='profiles'>
                 {pets &&
                 pets.map((petprofile) =>
-                    <ul key={petprofile.id}>
+                    <ol key={petprofile.id}>
                         <div className='present-profile'>
-                            <AddPicture />
+                            <CreateImage />
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>
@@ -48,7 +49,7 @@ const ProfilePresenter = () => {
                             <PetDrugs petID={petprofile.id} />
                             <br></br>
                         </div>
-                    </ul>)}<br></br>
+                    </ol>)}<br></br>
                 <AddDrug />
             </div>
         </div>

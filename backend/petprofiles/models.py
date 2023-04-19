@@ -2,6 +2,8 @@ from django.db import models
 from authentication.models import User
 # from prescriptions.models import Prescription
 
+def upload_to(instance, filename):
+    return 'images/{filename}'.format(filename=filename)
 
 # Create your models here.
 class PetProfile(models.Model):
@@ -10,7 +12,9 @@ class PetProfile(models.Model):
     species = models.CharField(max_length=255)
     breed = models.CharField(max_length=255)
     date_of_birth = models.DateField(max_length=255)
-    image = models.ImageField(null=True)
+
+class Image(models.Model):
+    image_url = models.ImageField(upload_to=upload_to, blank=True, null=True)
 
     
     # prescriptions = models.ManyToManyField(Prescription, through='Pet_Prescription')
