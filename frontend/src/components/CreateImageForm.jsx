@@ -32,12 +32,12 @@ const CreateImage = () => {
     const doSubmit = async (e) => {
         e.preventDefault();
         const response = await API.createImageEntry(data);
+        console.log(response)
         if (response.status === 400) {
             setErrors(response.data)
         }
     };
     
-
     return ( 
         <Form>
             <Row>

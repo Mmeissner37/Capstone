@@ -39,6 +39,7 @@ const ProfilePresenter = () => {
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
+                            <AddPicture />
                             <CreateImage />
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
