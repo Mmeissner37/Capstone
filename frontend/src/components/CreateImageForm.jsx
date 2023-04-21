@@ -43,27 +43,35 @@ const CreateImage = (props) => {
         <Form>
             <Row>
                 <Form.Group controlId="formFile" className="mb-3">
-                    <Form.Label>Profile Image</Form.Label>
-                    <Form.Control
-                        type="file"
-                        name="image_url"
-                        accept="image/jpeg,image/png,image/gif"
-                        onChange={(e) => {
-                            handleImageChange(e);
-                        }}
-                    />
-                    {errors.image_url && (
-                        <Form.Text className="alert-danger" tooltip>
-                            {errors.image_url}
-                        </Form.Text>
-                    )}
+                    <div className='image-form'>
+                        <div>
+                            <Form.Label>Add A Profile Image:</Form.Label>
+                        </div><br></br>
+                        <div>
+                            <Form.Control
+                                type="file"
+                                name="image_url"
+                                accept="image/jpeg,image/png,image/gif"
+                                onChange={(e) => {
+                                    handleImageChange(e);
+                                }}
+                            />
+                            {errors.image_url && (
+                                <Form.Text className="alert-danger" tooltip>
+                                    {errors.image_url}
+                                </Form.Text>
+                            )}
+                        </div>
+                    </div>
                 </Form.Group>
             </Row>
-            <Button
-                variant="primary"
-                type="submit"
-                onClick={(e) => doSubmit(e)}>
-            Submit</Button>
+            <div className='image-form'>
+                <Button
+                    variant="primary"
+                    type="submit"
+                    onClick={(e) => doSubmit(e)}>
+                Submit</Button>
+            </div>
         </Form>
     );
 };

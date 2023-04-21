@@ -53,14 +53,3 @@ const PetDrugs = (props) => {
 }
  
 export default PetDrugs;
-
-// <div className='petdrugs'>
-// {petDrugs.map((pet_prescription) =>
-// <ul key={pet_prescription.id}>
-//     {/* Pet ID: {pet_prescription.pet_id}
-//     Pet Name: {pet_prescription.pet_name} */}
-//     Prescription ID: {pet_prescription.prescription}
-//     {pet_prescription.prescription}
-// </ul>
-// )}
-// </div>

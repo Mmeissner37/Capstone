@@ -29,7 +29,7 @@ const ProfilePresenter = () => {
     }, [token]);
 
     return (
-        <div className='container'>
+        <div>
             <div className='profile-header'>
                 <h2>{user.username}'s Pets</h2><br></br>
             </div>

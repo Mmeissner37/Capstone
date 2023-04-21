@@ -129,6 +129,8 @@ button:hover {
   margin-bottom: 1rem;
   gap: 2rem;
   background-color: rgb(228, 222, 222);
+  padding-left: 0.5rem;
+  text-decoration: none;
 }
 
 .showprofiledrugs {
@@ -136,4 +138,7 @@ button:hover {
   text-align: left;
 }
 
-
+.image-form {
+  align-items: center;
+  padding-top: 1rem;
+}
