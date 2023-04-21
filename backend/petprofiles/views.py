@@ -8,14 +8,14 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import viewsets
 from .models import PetProfile
 from .serializers import PetProfileSerializer
-from .models import Image
-from .serializers import ImageSerializer
+# from .models import Image
+# from .serializers import ImageSerializer
 
 # Create your views here.
 
-class ImageViewSet(viewsets.ModelViewSet):
-    queryset = Image.objects.order_by('-id')
-    serializer_class = ImageSerializer
+class PetProfileViewSet(viewsets.ModelViewSet):
+    queryset = PetProfile.objects.order_by('-id')
+    serializer_class = PetProfileSerializer
     parser_classes = (MultiPartParser, FormParser)
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
@@ -55,7 +55,7 @@ def create_pet(request):
 def alter_pet(request, pk):
     alterpet = get_object_or_404(PetProfile, pk=pk)
     if request.method == 'PUT':
-        serializer = PetProfileSerializer(alterpet, data=request.data)
+        serializer = PetProfileSerializer(alterpet, data=request.data, partial=True)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)

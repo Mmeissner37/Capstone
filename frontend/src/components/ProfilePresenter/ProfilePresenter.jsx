@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 
-import AddPicture from '../AddPicture/AddPicture';
 import { Link } from 'react-router-dom';
 import PetDrugs from '../PetDrugs';
 import AddDrug from '../AddDrug';
@@ -39,8 +38,7 @@ const ProfilePresenter = () => {
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
-                            <AddPicture />
-                            <CreateImage />
+                            <CreateImage petID={petprofile.id}/>
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>

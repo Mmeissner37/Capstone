@@ -12,9 +12,8 @@ class PetProfile(models.Model):
     species = models.CharField(max_length=255)
     breed = models.CharField(max_length=255)
     date_of_birth = models.DateField(max_length=255)
+    image_url= models.ImageField(upload_to=upload_to, blank=True, null=True)
 
-class Image(models.Model):
-    image_url = models.ImageField(upload_to=upload_to, blank=True, null=True)
 
     
     # prescriptions = models.ManyToManyField(Prescription, through='Pet_Prescription')

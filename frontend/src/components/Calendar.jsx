@@ -48,12 +48,11 @@ export const MyCalendar = () => {
         )
     }
 
-
     return (
         <div className="calendar">
             <FullCalendar 
-                editable
-                selectable
+                editable={true}
+                selectable={true}
                 events = {events}
                 select = {eventClick}
                 initialView='timeGridWeek'
@@ -75,6 +74,7 @@ export const MyCalendar = () => {
         </div>
     )
 }
+
 
 
 

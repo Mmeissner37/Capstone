@@ -11,4 +11,5 @@ urlpatterns = [
     path('newpet/', views.create_pet),
     path('alterpet/<int:pk>/', views.alter_pet),
     
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+

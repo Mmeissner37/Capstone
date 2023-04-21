@@ -14,7 +14,7 @@ import API from './API';
     onChange={(e) => {handleImageChange(e)}}></input> */}
 
 
-const CreateImage = () => {
+const CreateImage = (props) => {
     const [data, setData] = useState({
         image_url: '',
     });
@@ -31,11 +31,12 @@ const CreateImage = () => {
 
     const doSubmit = async (e) => {
         e.preventDefault();
-        const response = await API.createImageEntry(data);
+        const response = await API.createImageEntry(data, props.petID);
         console.log(response)
         if (response.status === 400) {
             setErrors(response.data)
         }
+        <img src = {`http://127.0.0.1:8000${props.petID.image_url}`}/>
     };
     
     return ( 

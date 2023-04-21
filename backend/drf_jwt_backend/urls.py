@@ -28,6 +28,6 @@ urlpatterns = [
     path('api/cars/', include('cars.urls')),
     path('pets/', include('petprofiles.urls')),
     path('drugs/', include('prescriptions.urls')),
-    path('both/', include('pet_prescription.urls'))
+    path('both/', include('pet_prescription.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
