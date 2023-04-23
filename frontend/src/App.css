@@ -39,6 +39,7 @@ button:hover {
   overflow: auto;
   text-align: left;
   padding-top: 1rem;
+  font-family: inherit;
 }
 
 .container-header {
@@ -55,17 +56,6 @@ button:hover {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-
-/* .container-meds {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-}
- */
 
 .form {
   align-items: left;

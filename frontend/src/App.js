@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import AddPrescriptionPage from "./pages/AddPrescriptionPage/AddPrescriptionPage";
+import UpdatePetPage from "./pages/UpdatePetPage/UpdatePetPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
           <Route path="/createdrug" element={<PrivateRoute><AddPrescriptionPage /></PrivateRoute>} />
+          <Route path="/updatepet" element={<PrivateRoute><UpdatePetPage /></PrivateRoute>} />
         </Routes>
       </div>
       <Footer />

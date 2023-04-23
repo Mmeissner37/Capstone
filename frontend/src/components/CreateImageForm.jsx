@@ -4,14 +4,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import API from './API';
-
-
-{/* <input type="file" 
-    name="image_url"
-    accept="image/jpeg,image/png,image/gif"
-    onChange={(e) => {handleImageChange(e)}}></input> */}
 
 
 const CreateImage = (props) => {
@@ -36,7 +29,6 @@ const CreateImage = (props) => {
         if (response.status === 400) {
             setErrors(response.data)
         }
-        <img src = {`http://127.0.0.1:8000${props.petID.image_url}`}/>
     };
     
     return ( 
@@ -45,7 +37,7 @@ const CreateImage = (props) => {
                 <Form.Group controlId="formFile" className="mb-3">
                     <div className='image-form'>
                         <div>
-                            <Form.Label>Add A Profile Image:</Form.Label>
+                            <Form.Label>Add Profile Picture:</Form.Label>
                         </div><br></br>
                         <div>
                             <Form.Control

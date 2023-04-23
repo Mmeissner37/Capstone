@@ -23,10 +23,6 @@ const apiSettings = {
             }).catch((error) => {
                 return error.response;
             });
-
-            // if (myNewImage.status === 200) {
-            //     <img src = {`http://127.0.0.1:8000/${petID.image_url}`} height='200px' width='150px' />;
-            // }
             return myNewImage;
         },
 };

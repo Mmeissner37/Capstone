@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import PetDrugs from '../PetDrugs';
 import AddDrug from '../AddDrug';
 import CreateImage from '../CreateImageForm';
+import DisplayPicture from '../DisplayPicture/DisplayPicture';
 
 
 const ProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
+    const navigate = useNavigate();
 
     useEffect (() => {
         const fetchPets = async() => {
@@ -39,6 +42,7 @@ const ProfilePresenter = () => {
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
                             <CreateImage petID={petprofile.id}/>
+                            <DisplayPicture />
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>
@@ -46,10 +50,13 @@ const ProfilePresenter = () => {
                             Date of Birth: {petprofile.date_of_birth}<br></br>
                             Medications: 
                             <PetDrugs petID={petprofile.id} />
+                            <button onClick={() => navigate('/updatepet')}>Update Profile</button>
+                            <button>Delete Profile</button>
+                            <AddDrug />
                             <br></br>
                         </div>
                     </ol>)}<br></br>
-                <AddDrug />
+                {/* <AddDrug /> */}
             </div>
         </div>
     )
