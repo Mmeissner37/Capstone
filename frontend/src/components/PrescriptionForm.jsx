@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
-import PrescriptionPresenter from './PrescriptionPresenter';
 
 
 let initialValues= {
@@ -48,7 +47,7 @@ const AddPrescription = () => {
                 <br></br>
                 <button>Add Medication</button>
             </form><br></br>
-            <Link to="/createdrug">Go To Current Prescriptions</Link>
+            <Link to="/createdrug" style={{ textDecoration: "underline", color: "blue" }}>Go To Current Prescriptions</Link>
         </div>
      );
 }

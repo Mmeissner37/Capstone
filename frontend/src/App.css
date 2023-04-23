@@ -104,7 +104,19 @@ button:hover {
 .petdrugs {
   background-color: rgb(228, 222, 222);
   text-align: left;
-  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: row;
+  gap: 1.5rem;
+}
+
+.petlist {
+  background-color: rgb(228, 222, 222);
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: row;
+  gap: 0.5rem;
 }
 
 .profile-header {
@@ -126,6 +138,7 @@ button:hover {
 .showprofiledrugs {
   font-size: smaller;
   text-align: left;
+  font-size: small;
 }
 
 .image-form {

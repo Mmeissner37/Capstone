@@ -34,19 +34,19 @@ export const MyCalendar = () => {
         );
     };
 
-    const Sidebar = () =>{
-        return (
-            <div>
-                <h4>Instruction</h4>
-                <ul>
-                    <li>Select dates to create new appointment</li>
-                    <li>Drag, drop, and resize events</li>
-                    <li>Click and even to delete it</li>
-                </ul>
-            </div>
+    // const Sidebar = () =>{
+    //     return (
+    //         <div>
+    //             <h4>Instruction</h4>
+    //             <ul>
+    //                 <li>Select dates to create new appointment</li>
+    //                 <li>Drag, drop, and resize events</li>
+    //                 <li>Click an even to delete it</li>
+    //             </ul>
+    //         </div>
 
-        )
-    }
+    //     )
+    // }
 
     return (
         <div className="calendar">

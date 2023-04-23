@@ -1,7 +1,5 @@
 import React from "react";
 import ProfilePresenter from "../../components/ProfilePresenter/ProfilePresenter";
-import useAuth from "../../hooks/useAuth";
-import { Link } from "react-router-dom";
 
 const ProfilePage = () => {
 

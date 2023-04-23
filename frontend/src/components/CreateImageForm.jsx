@@ -8,6 +8,8 @@ import API from './API';
 
 
 const CreateImage = (props) => {
+    const [pets, setpets] = useState([]);
+
     const [data, setData] = useState({
         image_url: '',
     });
@@ -32,6 +34,7 @@ const CreateImage = (props) => {
     };
     
     return ( 
+    <div>
         <Form>
             <Row>
                 <Form.Group controlId="formFile" className="mb-3">
@@ -65,6 +68,10 @@ const CreateImage = (props) => {
                 Submit</Button>
             </div>
         </Form>
+            {/* <div className='pictures'>
+                <img src ={`http://127.0.0.1:8000/pets/${image_url}/`} />
+            </div> */}
+    </div>
     );
 };
  

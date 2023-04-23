@@ -15,7 +15,7 @@ const AddDrug = () => {
     const [user, token] = useAuth()
     const navigate = useNavigate()
     const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues, putDrug)
-    //Add onClick event to travel to /createdrug page OR alert to rx form??
+    //Add onClick event to travel to /createdrug page OR prompt to rx form??
 
     async function putDrug() {
         try{

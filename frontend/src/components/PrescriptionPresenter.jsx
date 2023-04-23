@@ -44,8 +44,3 @@ const PrescriptionPresenter = () => {
 export default PrescriptionPresenter;
 
 
-// {pets &&
-//     pets.map((petprescription) =>
-//     <ul key={petprescription.id}>
-//         Medications: {petprescription.prescripton}<br></br>
-//     </ul>)}

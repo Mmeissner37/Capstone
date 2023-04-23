@@ -42,7 +42,7 @@ const PetDrugs = (props) => {
     return ( 
         <div className="container-md">
             <div className='showprofiledrugs'>
-                {filteredDrugs[0] ? filteredDrugs.map(el => {return(<ol className='profiledrugs'>
+                {filteredDrugs[0] ? filteredDrugs.map(el => {return(<ol className='profiledrugs' key={el.prescription.id}>
                     <li>Drug Name: {el.prescription.drug_name}</li>
                     <li>Drug Dose: {el.prescription.drug_dose}</li>
                     <li>Drug Instructions: {el.prescription.drug_instr}</li><br></br>

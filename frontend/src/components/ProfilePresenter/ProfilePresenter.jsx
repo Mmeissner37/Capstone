@@ -5,9 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import PetDrugs from '../PetDrugs';
-import AddDrug from '../AddDrug';
 import CreateImage from '../CreateImageForm';
-import DisplayPicture from '../DisplayPicture/DisplayPicture';
+import UpdateDrug from '../UpdateDrug';
 
 
 const ProfilePresenter = () => {
@@ -42,7 +41,7 @@ const ProfilePresenter = () => {
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
                             <CreateImage petID={petprofile.id}/>
-                            <DisplayPicture />
+                            {/* <DisplayPicture /> */}
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>
@@ -50,13 +49,11 @@ const ProfilePresenter = () => {
                             Date of Birth: {petprofile.date_of_birth}<br></br>
                             Medications: 
                             <PetDrugs petID={petprofile.id} />
-                            <button onClick={() => navigate('/updatepet')}>Update Profile</button>
-                            <button>Delete Profile</button>
-                            <AddDrug />
+                            <button onClick={()=> navigate('/createdrug')}>Add Medications To Profile</button>
+                            <button onClick={()=> navigate(<UpdateDrug />)}>Update Medications</button>
                             <br></br>
                         </div>
                     </ol>)}<br></br>
-                {/* <AddDrug /> */}
             </div>
         </div>
     )
