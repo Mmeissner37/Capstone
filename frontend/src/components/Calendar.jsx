@@ -29,24 +29,10 @@ export const MyCalendar = () => {
         const {event} = info;
         return(
             <div>
-                <p>{event.title}</p>
+                <ul>{event.title}</ul>
             </div>
         );
     };
-
-    // const Sidebar = () =>{
-    //     return (
-    //         <div>
-    //             <h4>Instruction</h4>
-    //             <ul>
-    //                 <li>Select dates to create new appointment</li>
-    //                 <li>Drag, drop, and resize events</li>
-    //                 <li>Click an even to delete it</li>
-    //             </ul>
-    //         </div>
-
-    //     )
-    // }
 
     return (
         <div className="calendar">

@@ -23,8 +23,10 @@ const apiSettings = {
             }).catch((error) => {
                 return error.response;
             });
-            // return myNewImage(<img src ={`http://127.0.0.1:8000/pets/${image_url}/`} />);
+            return myNewImage;
         },
 };
 
 export default apiSettings;
+
+//<img src={`http://127.0.0.1:8000/pets/alterpet/${image_url}/`} />

@@ -40,8 +40,8 @@ const PetDrugs = (props) => {
     //filter.includes(pet_prescription.pet_id).map(pet_prescription)
 
     return ( 
-        <div className="container-md">
-            <div className='showprofiledrugs'>
+        <div className="showpetdrugs">
+            <div className='container'>
                 {filteredDrugs[0] ? filteredDrugs.map(el => {return(<ol className='profiledrugs' key={el.prescription.id}>
                     <li>Drug Name: {el.prescription.drug_name}</li>
                     <li>Drug Dose: {el.prescription.drug_dose}</li>

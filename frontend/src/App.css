@@ -129,19 +129,24 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
-  gap: 2rem;
+  gap: 1rem;
   background-color: rgb(228, 222, 222);
   padding-left: 0.5rem;
   text-decoration: none;
 }
 
 .showprofiledrugs {
-  font-size: smaller;
-  text-align: left;
   font-size: small;
+  text-align: left;
+  text-decoration: none;
 }
 
 .image-form {
   align-items: center;
   padding-top: 1rem;
+}
+
+.drug-buttons {
+  display: flex;
+  gap: 1rem;
 }

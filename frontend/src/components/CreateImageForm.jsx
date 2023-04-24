@@ -68,9 +68,6 @@ const CreateImage = (props) => {
                 Submit</Button>
             </div>
         </Form>
-            {/* <div className='pictures'>
-                <img src ={`http://127.0.0.1:8000/pets/${image_url}/`} />
-            </div> */}
     </div>
     );
 };

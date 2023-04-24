@@ -2,12 +2,12 @@
 
 
 
-// const DisplayPicture = (petID) => {
+// const DisplayPicture = () => {
 //     const [pets, setPets] = useState([]);
 
 //     return (
 //         <div className='pictures'>
-//             Picture: <img src ={`http://127.0.0.1:8000/pets/${image_url}/`} />
+//             {fetch(<img src = {`http://127.0.0.1:8000${el.image_url}`}/>)}
 //         </div>
 //     )
 // }
