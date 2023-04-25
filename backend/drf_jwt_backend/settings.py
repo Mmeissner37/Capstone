@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'petprofiles',
     'prescriptions',
     'pet_prescription',
+    'appointments'
 ]
 
 MIDDLEWARE = [

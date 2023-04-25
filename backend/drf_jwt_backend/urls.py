@@ -18,6 +18,7 @@ from django.urls import path, include
 from petprofiles.urls import path
 from prescriptions.urls import path 
 from pet_prescription.urls import path
+from appointments.urls import path 
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,5 +30,6 @@ urlpatterns = [
     path('pets/', include('petprofiles.urls')),
     path('drugs/', include('prescriptions.urls')),
     path('both/', include('pet_prescription.urls')),
+    path('appts/', include('appointments.urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

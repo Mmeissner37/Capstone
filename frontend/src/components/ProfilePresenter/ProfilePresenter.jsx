@@ -8,11 +8,11 @@ import PetDrugs from '../PetDrugs';
 import CreateImage from '../CreateImageForm';
 
 
-
 const ProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
     const navigate = useNavigate();
+    
 
     useEffect (() => {
         const fetchPets = async() => {
@@ -41,7 +41,7 @@ const ProfilePresenter = () => {
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
                             <CreateImage petID={petprofile.id}/>
-                            {<img src= {`http://127.0.0.1.8000/pets/${petprofile.image_url}/`} height='200px' width='150px'/>}
+                            <img src= {`../../../../mediafiles/images/${petprofile.image_url}`} height='250px' width='200px'/>
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>

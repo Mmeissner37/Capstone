@@ -9,3 +9,10 @@ class Prescription(models.Model):
     drug_instr = models.CharField(max_length=255, null=True)
     # pet_profile = models.ManyToManyField(PetProfile, through='Pet_Prescription')
 
+
+    def __str__(self) -> str:
+        return f"{self.drug_name}"
+    def __str__(self) -> str:
+        return f"{self.drug_dose}"    
+    def __str__(self) -> str:
+        return f"{self.drug_instr}"
