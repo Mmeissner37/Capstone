@@ -12,7 +12,3 @@ class Prescription(models.Model):
 
     def __str__(self) -> str:
         return f"{self.drug_name}"
-    def __str__(self) -> str:
-        return f"{self.drug_dose}"    
-    def __str__(self) -> str:
-        return f"{self.drug_instr}"

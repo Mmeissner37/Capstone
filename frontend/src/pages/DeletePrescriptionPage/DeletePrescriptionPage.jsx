@@ -1,24 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
-import useCustomForm from '../../hooks/useCustomForm';
+
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import PrescriptionPresenter from '../../components/PrescriptionPresenter';
 
 
-let initialValues= {
-    prescription_id: " ",
-    drug_name: " ",
-}
-
 const DeletePrescriptionPage = () => {
     const [user, token] = useAuth()
     const navigate = useNavigate()
-    const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues, postDrug)
+    const [prescription_id, setDrugID] = useState('');
+    const [drug_name, setDrugName] = useState('');
+    
 
-    async function postDrug(prescription_id){
+    function handleSubmit(e) {
+        e.preventDefault();
+        let drugGone = {
+            prescription_id: ' ',
+            drug_name: ' ',
+        }
+        deleteDrug(drugGone)
+    }
+
+    // useEffect (() => {
+    //     deleteDrug()
+    // }, [token])
+
+    async function deleteDrug(drugGone){
         try {
-            let response = await axios.delete(`http://127.0.0.1:8000/drugs/${prescription_id}`, formData, {
+            let response = await axios.delete(`http://127.0.0.1:8000/drugs/${prescription_id}/`, {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
@@ -34,10 +44,10 @@ const DeletePrescriptionPage = () => {
             <h2>Select Prescription to Delete</h2><br></br>
             <form className='form' onSubmit={handleSubmit}>
                 <label>Prescription ID: {' '}
-                    <input type='text' name="prescription_id" value={formData.prescription_id} onChange={handleInputChange} />
+                    <input type='text' value={prescription_id} onChange={(e) => setDrugID(e.target.value)} />
                 </label>
                 <label>Prescription Name: {' '}
-                    <input type='text' name="drug_name" value={formData.drug_name} onChange={handleInputChange} />
+                    <input type='text'  value={drug_name} onChange={(e) => setDrugName(e.target.value)} />
                 </label>
                 <button>Delete</button><br></br>
             </form>            

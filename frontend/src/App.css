@@ -150,3 +150,7 @@ button:hover {
   display: flex;
   gap: 1rem;
 }
+
+.box {
+  border: solid, black;
+}
