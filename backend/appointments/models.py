@@ -10,3 +10,6 @@ class Appointments(models.Model):
     start = models.TimeField()
     end = models.TimeField()
 
+    def __str__(self) -> str:
+        return f"{self.title}"
+    

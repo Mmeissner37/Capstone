@@ -8,8 +8,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import viewsets
 from .models import PetProfile
 from .serializers import PetProfileSerializer
-# from .models import Image
-# from .serializers import ImageSerializer
+
 
 # Create your views here.
 

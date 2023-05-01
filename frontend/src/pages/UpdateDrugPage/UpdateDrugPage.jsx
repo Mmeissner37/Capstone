@@ -25,16 +25,16 @@ const UpdateDrugPage = () => {
         modifyDrug(updateDrug)
     }
 
-    useEffect (() => {
-        modifyDrug()
-    }, [token] )
+    // useEffect (() => {
+    //     modifyDrug()
+    // }, [token] )
 
     async function modifyDrug(updateDrug){
         try {
             let response = await axios.put(`http://127.0.0.1:8000/drugs/${prescription_id}/`, updateDrug, {
                 headers: {
                     Authorization: 'Bearer ' + token
-                }
+                },
             })
             navigate('/profiles')
         } catch (error) {

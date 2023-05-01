@@ -22,10 +22,6 @@ const DeletePrescriptionPage = () => {
         deleteDrug(drugGone)
     }
 
-    // useEffect (() => {
-    //     deleteDrug()
-    // }, [token])
-
     async function deleteDrug(drugGone){
         try {
             let response = await axios.delete(`http://127.0.0.1:8000/drugs/${prescription_id}/`, {
