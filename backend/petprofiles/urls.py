@@ -10,6 +10,6 @@ urlpatterns = [
     path('<int:pk>/', views.pet_details),
     path('newpet/', views.create_pet),
     path('alterpet/<int:pk>/', views.alter_pet),
-    
+    path('images/<int:pk>/', views.get_images),
 ] 
 

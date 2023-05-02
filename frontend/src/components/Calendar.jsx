@@ -1,24 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import useAuth from '../hooks/useAuth';
+import useCustomForm from '../hooks/useCustomForm';
+
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from "@fullcalendar/interaction";
-import useAuth from '../hooks/useAuth';
 
+
+
+let initialValues= {
+    title: "",
+    appt_date: "",
+    start: "",
+    end: "",
+}
 
 export const MyCalendar = () => {
     const [events, setEvents] = useState([]);
+    const [appts, setappts] = useState([]);
     const [user, token]= useAuth();
+    const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues, postAppt)
+
+    useEffect (() =>{
+        const getAppts = async() => {
+            try {
+                let response = await axios.get('http://127.0.0.1:8000/appts/all/', {
+                    headers: {
+                        Authorization: 'Bearer ' + token,
+                    },
+                });
+            } catch (error) {
+                console.log(error.response.data)
+            }
+        };
+        getAppts();
+    }, [token])
+
+    async function postAppt(){
+        try {
+            let response = await axios.post('http://127.0.0.1:8000/appts/', formData, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            })
+        } catch (error){
+            console.log(error.message)
+        }
+    }
 
     const eventClick = (info) => {
-        const {start, end} = info;
-        const eventNamePrompt = prompt('Please enter appointment details here including pet name and reason for visit');
-        if (eventNamePrompt) {
+        const {title, appt_date, start, end} = info;
+        const eventPrompt = prompt('Please enter appointment details, including pet name and reason for visit')
+        if (eventPrompt) {
             setEvents([...events, 
                 {
                     start,
-                    end,
-                    title: eventNamePrompt,
+                    end, 
+                    title: {eventPrompt},
                     duration: '00:30',
                 },
             ]);
@@ -55,7 +95,6 @@ export const MyCalendar = () => {
             eventContent={(info) => <EventItem info={info} />}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]} 
             views={['dayGridWeek', 'dayGridDay','dayGridMonth']}
-
             />
         </div>
     )
