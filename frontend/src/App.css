@@ -108,6 +108,7 @@ button:hover {
   flex-direction: row;
   justify-content: row;
   gap: 1.5rem;
+  font-size: medium;
 }
 
 .petlist {
@@ -124,7 +125,10 @@ button:hover {
   border: solid black;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-header {
@@ -143,7 +147,14 @@ button:hover {
   text-decoration: none;
 }
 
-.showprofiledrugs {
+.indiv-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.showpetrugs {
   font-size: small;
   text-align: left;
   text-decoration: none;
