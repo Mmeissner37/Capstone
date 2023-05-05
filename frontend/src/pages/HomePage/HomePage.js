@@ -36,9 +36,10 @@ const HomePage = () => {
         <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2>
         <h4>Buisness Hours: Monday, Tuesday, Wednesday and Friday</h4>
         <h4>9:00 AM - 5:00 PM</h4>
-        <h4>Appointments are available every 30 minutes</h4>
+        <h4>Appointments are available every 30 minutes</h4><br></br>
+        <br></br>
+        <CalendarForm />
       </div>
-      <CalendarForm />
       <MyCalendar />
     </div>
 

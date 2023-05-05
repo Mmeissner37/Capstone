@@ -32,7 +32,7 @@ const AddPrescription = () => {
     }
 
     return (
-        <div className='container-md'>
+        <div className='container'>
             <h3>Add Medications to Account</h3><br></br>
             <form className='drug-form' onSubmit={handleSubmit}>
                 <label>Drug Name: {" "}

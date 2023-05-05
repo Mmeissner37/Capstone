@@ -57,8 +57,8 @@ const ProfilePresenter = () => {
                             </div>
                             <div className='drug-buttons'>
                                 <button onClick={()=> navigate('/createdrug')}>Add Medications To Profile</button>
-                                <button onClick={()=> navigate('/updatedrug')}>Update Medications</button>
-                                <button onClick={()=> navigate('/deletedrug')}>Delete Medications</button>
+                                <button onClick={()=> navigate('/updatedrug')}>Update A Medication</button>
+                                <button onClick={()=> navigate('/deletedrug')}>Delete A Medication</button>
                             </div>
                             <br></br>
                         </div>

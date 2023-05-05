@@ -121,14 +121,16 @@ button:hover {
 }
 
 .calender-header {
+  align-items: fixed;
+  width: 80%;
   background: rgb(228, 222, 222);
   border: solid black;
   margin-top: 0.5rem;
+  margin-left: 6rem;
+  margin-right: 5rem;
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .profile-header {

@@ -50,37 +50,37 @@ export const MyCalendar = () => {
         }
     }
 
-    const eventClick = (info) => {
-        const {title, appt_date, start, end} = info;
-        const eventPrompt = prompt('Please enter appointment details, including pet name and reason for visit')
-        if (eventPrompt) {
-            setEvents([...events, 
-                {
-                    start,
-                    end, 
-                    title: {eventPrompt},
-                    duration: '00:30',
-                },
-            ]);
-        }
-    };
+    // const eventClick = (info) => {
+    //     const {title, appt_date, start, end} = info;
+    //     const eventPrompt = prompt('Please enter appointment details, including pet name and reason for visit')
+    //     if (eventPrompt) {
+    //         setEvents([...events, 
+    //             {
+    //                 start,
+    //                 end, 
+    //                 title: {eventPrompt},
+    //                 duration: '00:30',
+    //             },
+    //         ]);
+    //     }
+    // };
 
-    const EventItem = ({info}) => {
-        const {event} = info;
-        return(
-            <div>
-                <ul>{event.title}</ul>
-            </div>
-        );
-    };
+    // const EventItem = ({info}) => {
+    //     const {event} = info;
+    //     return(
+    //         <div>
+    //             <ul>{event.title}</ul>
+    //         </div>
+    //     );
+    // };
 
     return (
         <div className="calendar">
             <FullCalendar 
                 editable={true}
-                selectable={true}
-                events = {events}
-                select = {eventClick}
+                // selectable={true}
+                // events = {events}
+                // select = {eventClick}
                 initialView='timeGridWeek'
             headerToolbar= {{
                 start: 'today prev,next', 
@@ -92,7 +92,7 @@ export const MyCalendar = () => {
                 start: '10:00',
                 end: '16:00',
             }}
-            eventContent={(info) => <EventItem info={info} />}
+            // eventContent={(info) => <EventItem info={info} />}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]} 
             views={['dayGridWeek', 'dayGridDay','dayGridMonth']}
             />
