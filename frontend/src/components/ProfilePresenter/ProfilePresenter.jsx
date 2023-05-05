@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 import PetDrugs from '../PetDrugs';
 import CreateImage from '../CreateImageForm';
-import DisplayPicture from '../DisplayPicture/DisplayPicture';
 
 
 const ProfilePresenter = () => {
@@ -35,13 +34,14 @@ const ProfilePresenter = () => {
             <div className='profile-header'>
                 <h2>{user.username}'s Pets</h2><br></br>
             </div>
-            <div className='profiles'>
+            <div>
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
+                            <h3>{petprofile.pet_name}</h3>
                             <CreateImage petID={petprofile.id}/>
-                            <img src= {`http://127.0.0.1:8000${petprofile.image_url}/`} height='250px' width='200px'/>
+                            <img src= {`http://127.0.0.1:8000${petprofile.image_url}/`} height='250px' width='200px' alt=''/>
                             ID: {petprofile.id}<br></br>
                             Name: {petprofile.pet_name}<br></br>
                             Species: {petprofile.species}<br></br>

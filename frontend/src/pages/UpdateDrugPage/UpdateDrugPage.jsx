@@ -17,28 +17,23 @@ const UpdateDrugPage = () => {
     function handleSubmit(e) {
         e.preventDefault();
         let updateDrug = {
-            prescription_id: ' ',
-            drug_name: ' ',
-            drug_dose: ' ',
-            drug_instr: ' ',
+            drug_name: drug_name,
+            drug_dose: drug_dose,
+            drug_instr: drug_instr,
         }
         modifyDrug(updateDrug)
     }
 
-    // useEffect (() => {
-    //     modifyDrug()
-    // }, [token] )
-
-    async function modifyDrug(updateDrug){
+    async function modifyDrug(updateDrug) {
         try {
             let response = await axios.put(`http://127.0.0.1:8000/drugs/${prescription_id}/`, updateDrug, {
                 headers: {
                     Authorization: 'Bearer ' + token
                 },
-            })
+            });
             navigate('/profiles')
         } catch (error) {
-            console.log(error.message)
+            console.log(error.response.data)
         }
     }
 

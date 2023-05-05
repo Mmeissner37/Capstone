@@ -33,7 +33,7 @@ def pet_drug(request):
 def alter_drug (request, pk):
     drug = get_object_or_404(Prescription, pk=pk)
     if request.method == 'PUT':
-        serializer = PrescriptionSerializer(drug, data=request.data)
+        serializer = PrescriptionSerializer(drug, data=request.data, partial=True)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)

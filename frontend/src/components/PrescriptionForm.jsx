@@ -45,9 +45,11 @@ const AddPrescription = () => {
                 <input type='text' name='drug_instr' value={formData.drug_instr} onChange={handleInputChange}/></label><br></br>         
                 <br></br>
                 <br></br>
-                <button>Add Medication</button>
+                <div className='drug-buttons'>
+                    <button>Add Medication</button>
+                    <button onClick={() => navigate('/createdrug')}>View Current Medications</button>
+                </div>
             </form><br></br>
-            <Link to="/createdrug" style={{ textDecoration: "underline", color: "blue" }}>Go To Current Prescriptions</Link>
         </div>
      );
 }

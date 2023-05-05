@@ -119,6 +119,14 @@ button:hover {
   gap: 0.5rem;
 }
 
+.calender-header {
+  background: rgb(228, 222, 222);
+  border: solid black;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .profile-header {
   text-align: center;
 }
@@ -154,3 +162,4 @@ button:hover {
 .box {
   border: solid, black;
 }
+

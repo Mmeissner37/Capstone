@@ -3,7 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import { MyCalendar } from "../../components/Calendar";
 import PrescriptionForm from '../../components/PrescriptionForm';
-
+import CalendarForm from "../../components/CalendarForm";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -31,6 +31,14 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <div className="calender-header">
+        <h1>Welcome to the Calendar Function!</h1>
+        <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2>
+        <h4>Buisness Hours: Monday, Tuesday, Wednesday and Friday</h4>
+        <h4>9:00 AM - 5:00 PM</h4>
+        <h4>Appointments are available every 30 minutes</h4>
+      </div>
+      <CalendarForm />
       <MyCalendar />
     </div>
 
