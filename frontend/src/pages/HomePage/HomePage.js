@@ -1,7 +1,7 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
-import { MyCalendar } from "../../components/Calendar";
+import MyCalendar from "../../components/Calendar";
 import PrescriptionForm from '../../components/PrescriptionForm';
 import CalendarForm from "../../components/CalendarForm";
 
@@ -32,7 +32,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="calender-header">
-        <h1>Welcome to the Calendar Function!</h1>
+        <h1>Welcome to the Calendar!</h1>
         <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2>
         <h4>Buisness Hours: Monday, Tuesday, Wednesday and Friday</h4>
         <h4>9:00 AM - 5:00 PM</h4>

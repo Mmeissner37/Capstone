@@ -17,7 +17,7 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import UpdateDrug from "./pages/UpdateDrugPage/UpdateDrugPage";
+
 
 function App() {
   return (

@@ -40,9 +40,6 @@ const CreateImage = (props) => {
                 <Form.Group controlId="formFile" className="mb-3">
                     <div className='image-form'>
                         <div>
-                            <Form.Label>Add Profile Picture:</Form.Label>
-                        </div><br></br>
-                        <div>
                             <Form.Control
                                 type="file"
                                 name="image_url"

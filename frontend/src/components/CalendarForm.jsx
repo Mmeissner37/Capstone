@@ -13,7 +13,6 @@ let initialValues={
 
 const CalendarForm = () => {
     const [user, token] = useAuth();
-    const [appt, setAppt] = useState([]);
     const navigate = useNavigate();
     const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues, postAppt)
 

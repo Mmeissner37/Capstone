@@ -109,6 +109,7 @@ button:hover {
   justify-content: row;
   gap: 1.5rem;
   font-size: medium;
+  overflow: auto;
 }
 
 .petlist {
@@ -118,6 +119,7 @@ button:hover {
   flex-direction: row;
   justify-content: row;
   gap: 0.5rem;
+  overflow: auto;
 }
 
 .calender-header {
@@ -156,12 +158,6 @@ button:hover {
   gap: 1rem;
 }
 
-.showpetrugs {
-  font-size: small;
-  text-align: left;
-  text-decoration: none;
-}
-
 .image-form {
   align-items: center;
   padding-top: 1rem;
@@ -176,3 +172,7 @@ button:hover {
   border: solid, black;
 }
 
+.list {
+  text-decoration: none;
+  font-size: medium;
+}
