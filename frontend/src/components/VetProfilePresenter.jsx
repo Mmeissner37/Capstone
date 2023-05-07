@@ -37,9 +37,10 @@ const ProfilePresenter = () => {
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
                         <div className='present-profile'>
-                            <h3>{petprofile.pet_name}</h3>
                             <div className='indiv-profile'>
+                                Owner: {petprofile.username}
                                 ID: {petprofile.id}<br></br>
+                                Pet Name: {petprofile.pet_name}
                                 Species: {petprofile.species}<br></br>
                                 Breed: {petprofile.breed}<br></br>
                                 Date of Birth: {petprofile.date_of_birth}<br></br>
@@ -51,11 +52,6 @@ const ProfilePresenter = () => {
                                 Medications: 
                             <div className='profiledrugs'>
                                 <PetDrugs petID={petprofile.id} />
-                            </div>
-                            <div className='drug-buttons'>
-                                <button onClick={()=> navigate('/createdrug')}>Add Medications To Profile</button>
-                                <button onClick={()=> navigate('/updatedrug')}>Update A Medication</button>
-                                <button onClick={()=> navigate('/deletedrug')}>Delete A Medication</button>
                             </div>
                             <br></br>
                         </div>

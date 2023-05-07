@@ -1,6 +1,7 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
-import ProfileForm from "../../components/ProfileForm/ProfileForm";
+import VetProfilePresenter from "../../components/VetProfilePresenter";
+
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -14,6 +15,9 @@ const HomePage = () => {
       <div className="container-md">
         <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
+        </div>
+        <div>
+            <VetProfilePresenter />
         </div>
       </div>
       <div className="calender-header">
