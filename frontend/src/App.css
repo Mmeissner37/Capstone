@@ -96,6 +96,7 @@ button:hover {
   background-size: 65%;
   background-repeat: repeat;
   color: black;
+  padding-top: 0.75rem;;
 }
 
 .calendar {

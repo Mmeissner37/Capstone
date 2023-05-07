@@ -31,6 +31,14 @@ def get_all_profiles(request):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
+def vet_profiles(request):
+    profiles = PetProfile.objects.all()
+    serializer = PetProfileSerializer(profiles, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_images(request, pk):
     images = get_object_or_404(PetProfile, pk=pk)

@@ -11,5 +11,6 @@ urlpatterns = [
     path('newpet/', views.create_pet),
     path('alterpet/<int:pk>/', views.alter_pet),
     path('images/<int:pk>/', views.get_images),
+    path('vet/', views.vet_profiles),
 ] 
 
