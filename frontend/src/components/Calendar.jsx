@@ -12,7 +12,7 @@ const MyCalendar = () => {
     const [user, token]= useAuth();
     const [appts, setAppts] = useState([]);
 
-    
+
     useEffect (() => {
         const getAppts = async() => {
             try{
@@ -22,7 +22,7 @@ const MyCalendar = () => {
                     },
                 });
             } catch (error) {
-                console.log(error.resposne.data)
+                console.log(error.response.data)
             }
         };
         getAppts();

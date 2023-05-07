@@ -23,17 +23,17 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="whole-page">
-        <Routes>
-          <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>}/>
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
-          <Route path="/createdrug" element={<PrivateRoute><AddPrescriptionPage /></PrivateRoute>} />
-          <Route path="/updatedrug" element={<PrivateRoute><UpdateDrugPage /></PrivateRoute>} />
-          <Route path="/deletedrug" element={<PrivateRoute><DeletePrescriptionPage /></PrivateRoute>} />
-        </Routes>
-      </div>
+        <div className="whole-page">
+          <Routes>
+            <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>}/>
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
+            <Route path="/createdrug" element={<PrivateRoute><AddPrescriptionPage /></PrivateRoute>} />
+            <Route path="/updatedrug" element={<PrivateRoute><UpdateDrugPage /></PrivateRoute>} />
+            <Route path="/deletedrug" element={<PrivateRoute><DeletePrescriptionPage /></PrivateRoute>} />
+          </Routes>
+        </div>
       <Footer />
     </div>
   );

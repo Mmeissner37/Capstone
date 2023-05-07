@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 //React-Bootstrap
 import Form from 'react-bootstrap/Form';
@@ -9,6 +10,7 @@ import API from './API';
 
 const CreateImage = (props) => {
     const [pets, setpets] = useState([]);
+    const navigate = useNavigate
 
     const [data, setData] = useState({
         image_url: '',
@@ -38,7 +40,7 @@ const CreateImage = (props) => {
         <Form>
             <Row>
                 <Form.Group controlId="formFile" className="mb-3">
-                    <div className='image-form'>
+                    <div>
                         <div>
                             <Form.Control
                                 type="file"
@@ -48,22 +50,16 @@ const CreateImage = (props) => {
                                     handleImageChange(e);
                                 }}
                             />
+                            <Button type="submit" onClick={(e) => doSubmit(e)}>Submit</Button>
                             {errors.image_url && (
                                 <Form.Text className="alert-danger" tooltip>
                                     {errors.image_url}
                                 </Form.Text>
                             )}
                         </div>
-                    </div>
+                </div>
                 </Form.Group>
             </Row>
-            <div className='image-form'>
-                <Button
-                    variant="primary"
-                    type="submit"
-                    onClick={(e) => doSubmit(e)}>
-                Submit</Button>
-            </div>
         </Form>
     </div>
     );

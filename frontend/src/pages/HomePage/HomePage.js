@@ -19,7 +19,7 @@ const HomePage = () => {
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>
           <a href="/profiles">
-            <img src="https://media.istockphoto.com/id/1269517302/vector/vector-image-of-pet-logo-on-white.jpg?s=612x612&w=0&k=20&c=0DEPLd3Lq5VINJRLNbQoXUOqzlXTIpHMZ76t5E0gzD4=" height='75px' width='75px' alt="paw print" />
+            <img src="https://media.istockphoto.com/id/1269517302/vector/vector-image-of-pet-logo-on-white.jpg?s=612x612&w=0&k=20&c=0DEPLd3Lq5VINJRLNbQoXUOqzlXTIpHMZ76t5E0gzD4=" height='75px' width='75px' alt="silhouette of cat and dog" />
           </a>
         </div>
         <div className="homepage">

@@ -18,7 +18,7 @@ p {
 }
 
 button {
-  background-color: transparent;
+  background-color: rgb(217, 218, 213);
   border: 2px solid black;
   color: black;
   font-size: 1rem;
@@ -45,6 +45,7 @@ button:hover {
 .container-header {
   align-items: center;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .container-home {
@@ -74,11 +75,25 @@ button:hover {
   font-size: 17px;
 }
 
+.reg-page{
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/001/306/087/original/young-woman-with-a-dog-standing-next-to-the-shore-of-a-lake-or-the-sea-at-sunset-looking-into-the-distance-dreaming.jpg);
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-bottom: 2em;
+  padding-top: 1em;
+}
+
+.login {
+  background-image: url(https://d.newsweek.com/en/full/1438738/dog-beach.jpg);
+  height: 100%;
+  width: 100%;
+}
+
 .whole-page {
-  background-color: rgb(118, 209, 245);
   background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
   height: auto;
-  background-size: 80%;
+  background-size: 65%;
   background-repeat: repeat;
   color: black;
 }
@@ -87,8 +102,22 @@ button:hover {
   background-color: white;
   margin-left: 5rem;
   margin-right: 5rem;
-  align-items: fixed;
+  align-items: center;
 }
+
+.calender-header {
+  align-items: center;
+  width: 85%;
+  background: rgb(228, 222, 222);
+  border: solid black;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 
 .homepage {
   text-align: center;
@@ -120,19 +149,6 @@ button:hover {
   justify-content: row;
   gap: 0.5rem;
   overflow: auto;
-}
-
-.calender-header {
-  align-items: fixed;
-  width: 80%;
-  background: rgb(228, 222, 222);
-  border: solid black;
-  margin-top: 0.5rem;
-  margin-left: 6rem;
-  margin-right: 5rem;
-  padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .profile-header {
