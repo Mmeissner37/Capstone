@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import VetProfilePresenter from "../../components/VetProfilePresenter";
 
 
 const HomePage = () => {
-  // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
-  // The "token" value is the JWT token that you will send in the header of any request requiring authentication
-  //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
+  const [appts, setAppts] = useState([]);
+
+  useEffect (() => {
+    getAppts();
+  }, [token])
+
+  async function getAppts() {
+    let response = await axios.get('http://127.0.0.1:8000/appts/all/', {
+            headers: {
+                Authorization: 'Bearer ' + token,
+            },
+        });
+      setAppts();
+    }
 
 
   return (
@@ -23,6 +34,19 @@ const HomePage = () => {
       <div className="calender-header">
         <h1>Welcome Local Paws Animal Clinic!</h1>
         <h4>See all your scheduled appointments below</h4>
+        <div>
+          {appts && 
+          appts.map((appointments) =>
+            <ol key={appointments.id}>
+              <div>
+                Owner: {appointments.username}
+                Title: {appointments.title}
+                Appoinment Date: {appointments.appt_date}
+                Start Time: {appointments.start}
+                End Time: {appointments.end} 
+              </div>
+            </ol>)}
+        </div>
         <br></br>
       </div>
     </div>
