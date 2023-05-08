@@ -85,18 +85,23 @@ button:hover {
 }
 
 .login {
-  background-image: url(https://d.newsweek.com/en/full/1438738/dog-beach.jpg);
-  height: 100%;
-  width: 100%;
+  background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
+  height: auto;
+  width: auto;
+  padding-bottom: 50em;
+  background-repeat: no-repeat;
 }
 
-.whole-page {
+.homepage {
+  color: black;
+  padding-top: 0.75rem;
+}
+
+.wholepage {
   background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
   height: auto;
   background-size: 65%;
   background-repeat: repeat;
-  color: black;
-  padding-top: 0.75rem;;
 }
 
 .calendar {
@@ -108,17 +113,15 @@ button:hover {
 
 .calender-header {
   align-items: center;
-  width: 85%;
+  width: 71%;
   background: rgb(228, 222, 222);
   border: solid black;
   margin-top: 1rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-left: 10rem;
+  margin-right: 15rem;
+  padding: 0.5rem 0.5rem;
   margin-bottom: 1rem;
 }
-
 
 .homepage {
   text-align: center;

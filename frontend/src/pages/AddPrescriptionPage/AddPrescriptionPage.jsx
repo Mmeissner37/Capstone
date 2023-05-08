@@ -34,34 +34,36 @@ const AddPrescriptionPage = () => {
     }
 
     return ( 
-        <div className='container'>
-            <h2>Enter New Prescriptions</h2><br></br>
-            <form className='form' onSubmit={handleSubmit}>
-                <label>Pet's ID: {' '}
-                    <input type='text' name='pet_id' value={formData.pet_id} onChange={handleInputChange} />
-                </label>Pet's Name: {' '}
-                <label>
-                    <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} />
-                </label>
-                <label>Prescription ID: {' '}
-                    <input type='text' name="prescription_id" value={formData.prescription_id} onChange={handleInputChange} />
-                </label>
-                <label>Prescription Name: {' '}
-                    <input type='text' name="drug_name" value={formData.drug_name} onChange={handleInputChange} />
-                </label>
-                <button>Submit</button><br></br>
-            </form>            
-            <div>
-                <ProfileList />
+        <div className='wholepage'>
+            <div className='container'>
+                <h2>Enter New Prescriptions</h2><br></br>
+                <form className='form' onSubmit={handleSubmit}>
+                    <label>Pet's ID: {' '}
+                        <input type='text' name='pet_id' value={formData.pet_id} onChange={handleInputChange} />
+                    </label>Pet's Name: {' '}
+                    <label>
+                        <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} />
+                    </label>
+                    <label>Prescription ID: {' '}
+                        <input type='text' name="prescription_id" value={formData.prescription_id} onChange={handleInputChange} />
+                    </label>
+                    <label>Prescription Name: {' '}
+                        <input type='text' name="drug_name" value={formData.drug_name} onChange={handleInputChange} />
+                    </label>
+                    <button>Submit</button><br></br>
+                </form>            
+                <div>
+                    <ProfileList />
+                </div>
+                <div>
+                    <PrescriptionPresenter />
+                </div>
+                <br></br>
+                <a href="/profiles">
+                <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
+                </a>
+                <h5>Go Back To Profiles</h5>
             </div>
-            <div>
-                <PrescriptionPresenter />
-            </div>
-            <br></br>
-            <a href="/profiles">
-              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
-            </a>
-            <h5>Go Back To Profiles</h5>
         </div>
      );
 }

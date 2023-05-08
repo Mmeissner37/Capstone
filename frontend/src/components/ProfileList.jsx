@@ -29,6 +29,7 @@ const ProfileList = () => {
             pets.map((petprofile) =>
                 <ul key={petprofile.id}>
                     <div className='petlist'>
+                        <br></br>
                         ID: {petprofile.id}<br></br>
                         Name: {petprofile.pet_name}<br></br>
                         Species: {petprofile.species}<br></br>

@@ -10,6 +10,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import AddPrescriptionPage from "./pages/AddPrescriptionPage/AddPrescriptionPage";
 import UpdateDrugPage from "./pages/UpdateDrugPage/UpdateDrugPage";
 import DeletePrescriptionPage from "./pages/DeletePrescriptionPage/DeletePrescriptionPage";
+import VetHomePage from "./pages/VetHomePage/VetHomePage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";

@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import useAuth from "../../hooks/useAuth";
 import VetProfilePresenter from "../../components/VetProfilePresenter";
+import axios from "axios";
+import useAuth from "../../hooks/useAuth";
 
 
-const HomePage = () => {
+const VetHomePage = () => {
   const [user, token] = useAuth();
   const [appts, setAppts] = useState([]);
 
-  useEffect (() => {
-    getAppts();
-  }, [token])
-
-  async function getAppts() {
-    let response = await axios.get('http://127.0.0.1:8000/appts/all/', {
-            headers: {
-                Authorization: 'Bearer ' + token,
-            },
-        });
-      setAppts();
-    }
+  //Error ==== useEffect not defined??
+  
+  // useEffect (() => {
+  //   const getAppts = async() => {
+  //     try {
+  //       let response = await axios.get('http://127.0.0.1:8000/appts/all/', {
+  //         headers: {
+  //           Authorization: 'Bearer ' + token,
+  //         },
+  //       });
+  //       setAppts(response.data);
+  //     } catch(error) {
+  //         console.log(error.response.data)
+  //     }
+  //   };
+  //   getAppts();
+  // }, [token]);
 
 
   return (
@@ -54,4 +60,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default VetHomePage;

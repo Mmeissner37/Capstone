@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import PetDrugs from './PetDrugs';
+import useAuth from '../hooks/useAuth';
 
-import PetDrugs from '../PetDrugs';
 
-const ProfilePresenter = () => {
+const VetProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
     const navigate = useNavigate();
@@ -29,18 +29,15 @@ const ProfilePresenter = () => {
 
     return (
         <div>
-            <div className='profile-header'>
-                <h2>{user.username}'s Pets</h2><br></br>
-            </div>
             <div>
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
-                        <div className='present-profile'>
+                        <div className='present-profile'> 
                             <div className='indiv-profile'>
-                                Owner: {petprofile.username}
+                                Owner: {petprofile.user.username}<br></br>
                                 ID: {petprofile.id}<br></br>
-                                Pet Name: {petprofile.pet_name}
+                                Pet Name: {petprofile.pet_name}<br></br>
                                 Species: {petprofile.species}<br></br>
                                 Breed: {petprofile.breed}<br></br>
                                 Date of Birth: {petprofile.date_of_birth}<br></br>
@@ -61,4 +58,4 @@ const ProfilePresenter = () => {
     )
 }
 
-export default ProfilePresenter;
+export default VetProfilePresenter;

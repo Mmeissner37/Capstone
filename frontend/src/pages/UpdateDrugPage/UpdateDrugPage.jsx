@@ -38,31 +38,33 @@ const UpdateDrugPage = () => {
     }
 
     return ( 
-        <div className='container'>
-            <h2>Select Prescription to Update</h2><br></br>
-            <form className='form' onSubmit={handleSubmit}>
-                <label>Prescription ID: {' '}
-                    <input type='text' name="prescription_id" value={prescription_id} onChange={(e) => setDrugID(e.target.value)} />
-                </label>
-                <label>Prescription Name: {' '}
-                    <input type='text' name="drug_name" value={drug_name} onChange={(e) => setDrugName(e.target.value)} />
-                </label>
-                <label>Prescription Dose: {' '}
-                    <input type='text' name="drug_dose" value={drug_dose} onChange={(e) => setDrugDose(e.target.value)} />
-                </label>
-                <label>Prescription Instructions: {' '}
-                    <input type='text' name="drug_instr" value={drug_instr} onChange={(e)=> setDrugInstr(e.target.value)} />
-                </label>
-                <button>Update</button><br></br>
-            </form>            
-            <div>
-                <PrescriptionPresenter />
+        <div className='wholepage'>
+            <div className='container'>
+                <h2>Select Prescription to Update</h2><br></br>
+                <form className='form' onSubmit={handleSubmit}>
+                    <label>Prescription ID: {' '}
+                        <input type='text' name="prescription_id" value={prescription_id} onChange={(e) => setDrugID(e.target.value)} />
+                    </label>
+                    <label>Prescription Name: {' '}
+                        <input type='text' name="drug_name" value={drug_name} onChange={(e) => setDrugName(e.target.value)} />
+                    </label>
+                    <label>Prescription Dose: {' '}
+                        <input type='text' name="drug_dose" value={drug_dose} onChange={(e) => setDrugDose(e.target.value)} />
+                    </label>
+                    <label>Prescription Instructions: {' '}
+                        <input type='text' name="drug_instr" value={drug_instr} onChange={(e)=> setDrugInstr(e.target.value)} />
+                    </label>
+                    <button>Update</button><br></br>
+                </form>            
+                <div>
+                    <PrescriptionPresenter />
+                </div>
+                <br></br>
+                <a href="/profiles">
+                <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
+                </a>
+                <h5>Go Back To Profiles</h5>
             </div>
-            <br></br>
-            <a href="/profiles">
-              <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
-            </a>
-            <h5>Go Back To Profiles</h5>
         </div>
      );
 }

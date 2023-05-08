@@ -13,8 +13,8 @@ const HomePage = () => {
 
 
   return (
-    <div>
-      <div className="container-md">
+    <div className="wholepage">
+      <div className="container">
         <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>
@@ -23,24 +23,21 @@ const HomePage = () => {
           </a>
         </div>
         <div className="homepage">
-          <div className="profileform">
             <ProfileForm />
-          </div>
-          <div className="drugform">
             <PrescriptionForm />
-          </div>
         </div>
       </div>
       <div className="calender-header">
-        <h1>Welcome to the Calendar!</h1>
-        <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2>
+        <h1>Welcome to the Calendar!</h1><br></br>
+        <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2><br></br>
         <h4>Buisness Hours: Monday, Tuesday, Wednesday and Friday</h4>
-        <h4>9:00 AM - 5:00 PM</h4>
+        <h4>9:00 AM - 5:00 PM</h4><br></br>
         <h4>Appointments are available every 30 minutes</h4><br></br>
         <br></br>
         <CalendarForm />
-      </div>
-      <MyCalendar />
+      </div><br></br>
+      <MyCalendar /><br></br>
+      <br></br>
     </div>
 
   );

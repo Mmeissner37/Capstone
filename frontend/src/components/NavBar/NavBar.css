@@ -9,7 +9,10 @@ li {
 }
 
 .navBar {
-  background: rgb(128, 211, 243);
+  background-image: url('https://t4.ftcdn.net/jpg/05/53/71/23/360_F_553712384_9ZQnDpbLqGwX8Fvv8jxEcHrRqhpVxpUr.jpg');
+  background-size: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
   box-shadow: 4px 2px 5px gray;
   color: white;
   margin-bottom: 2rem;
