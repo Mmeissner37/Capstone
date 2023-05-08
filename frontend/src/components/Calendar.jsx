@@ -25,34 +25,30 @@ const MyCalendar = () => {
                     Authorization: 'Bearer ' + token,
                 },
             });
-        setAppts();
+            //{
+                //start:2020-02-28T15:00:00
+            //}
+            let customResponse = response.data.map((el,id)=>{
+                return{
+                    id:id,
+                    start: el.appt_date + "T" + el.start,
+                    end: el.appt_date + "T" + el.end,
+                    title: el.title
+                }
+            })
+        setAppts(customResponse);
     }
     
-    // const eventClick = (info) => {
-    //     const {title, appt_date, start, end} = info;
-    //     const eventPrompt = prompt(<CalendarForm />)
-    //     if (eventPrompt) {
-    //         setEvents([...events, 
-    //             {
-    //                 title: title, 
-    //                 appt_date: appt_date,
-    //                 start: start,
-    //                 end: end, 
-    //             },
-    //         ]);
-    //     }
-    // };
 
 
-    return (
+    return appts && (
         <div className="calendar">
-            {/* <button onClick={() => getAppts()}>See Appointments</button> */}
             <FullCalendar 
                 weekends={false}
-                editable={true}
-                selectable={true}
-                // events ={info}
-                select = {appts}
+                // editable={true}
+                // selectable={true}
+                events ={appts}
+                // select = {appts}
                 initialView='dayGridMonth'
             headerToolbar= {{
                 start: 'today prev,next', 
@@ -85,4 +81,19 @@ export default MyCalendar;
     //             <ul>{event.end}</ul>
     //         </div>
     //     );
+    // };
+
+    // const eventClick = (info) => {
+    //     const {title, appt_date, start, end} = info;
+    //     const eventPrompt = prompt(<CalendarForm />)
+    //     if (eventPrompt) {
+    //         setEvents([...events, 
+    //             {
+    //                 title: title, 
+    //                 appt_date: appt_date,
+    //                 start: start,
+    //                 end: end, 
+    //             },
+    //         ]);
+    //     }
     // };
