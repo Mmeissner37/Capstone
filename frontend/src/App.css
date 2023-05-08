@@ -110,6 +110,13 @@ button:hover {
   background-repeat: repeat;
 }
 
+.vet-homepage {
+  background-image: url(https://img.freepik.com/premium-photo/cat-paws-stethoscope-blue-background-concept-veterinary-medicine-taking-care-pets-copy-space_76158-860.jpg?w=2000);
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+}
+
 .calendar {
   background-color: white;
   margin-left: 5rem;
@@ -178,8 +185,9 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+  background-color: aliceblue;
 }
 
 .present-profile {
@@ -198,6 +206,8 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  gap: 1rem;
+  margin-right: 1.2rem;
 }
 
 .indiv-profile {

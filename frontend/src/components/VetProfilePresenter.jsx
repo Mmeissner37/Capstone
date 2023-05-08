@@ -37,13 +37,19 @@ const VetProfilePresenter = () => {
                         <div className='vetprofile'>
                             <div className='vetindiv-profile'>
                                 Owner: {petprofile.user.username}<br></br>
+                                <br></br>
                                 ID: {petprofile.id}<br></br>
+                                <br></br>
                                 Pet Name: {petprofile.pet_name}<br></br>
+                                <br></br>
                                 Species: {petprofile.species}<br></br>
+                                <br></br>
                                 Breed: {petprofile.breed}<br></br>
+                                <br></br>
                                 Date of Birth: {petprofile.date_of_birth}<br></br>
+                                <br></br>
                                 <div>
-                                    <h4>Add Profile Picture:</h4>
+                                    <h4>Profile Picture:</h4>
                                     <img src= {`http://127.0.0.1:8000${petprofile.image_url}/`} height='250px' width='200px' alt='Profile image'/>
                                 </div>
                             </div>

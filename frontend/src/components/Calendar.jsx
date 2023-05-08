@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
-import CalendarForm from './CalendarForm';
 
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -12,7 +11,6 @@ import interactionPlugin from "@fullcalendar/interaction";
 const MyCalendar = () => {
     const [user, token]= useAuth();
     const [appts, setAppts] = useState([]);
-    const [events, setEvents] = useState([]);
 
 
     useEffect (() => {
@@ -45,22 +43,24 @@ const MyCalendar = () => {
         <div className="calendar">
             <FullCalendar 
                 weekends={false}
+                events ={appts}
+                initialView='dayGridMonth'
                 // editable={true}
                 // selectable={true}
-                events ={appts}
                 // select = {appts}
-                initialView='dayGridMonth'
             headerToolbar= {{
                 start: 'today prev,next', 
                 center: 'title',
                 end: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
+            height= {650}
+            width={400}
             businessHours= {{
                 daysOfWeek: [1, 2, 3, 5],
                 start: '10:00',
                 end: '16:00',
             }}
-            // eventContent={(info) => <EventItem info={info} />}
+            // eventContent={(appts) => <EventItem info={appts} />}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]} 
             views={['dayGridWeek', 'dayGridDay','dayGridMonth']}
             />
