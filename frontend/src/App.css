@@ -35,7 +35,7 @@ button:hover {
 
 .container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 500px;
   overflow: auto;
   text-align: left;
   padding-top: 1rem;
@@ -46,6 +46,7 @@ button:hover {
   align-items: center;
   text-align: center;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .container-home {
@@ -76,12 +77,13 @@ button:hover {
 }
 
 .reg-page{
-  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/001/306/087/original/young-woman-with-a-dog-standing-next-to-the-shore-of-a-lake-or-the-sea-at-sunset-looking-into-the-distance-dreaming.jpg);
+  background-image: url(https://a-static.besthdwallpaper.com/dog-in-the-beach-wallpaper-1600x900-10767_47.jpg);
   height: 100%;
   width: 100%;
-  color: white;
-  padding-bottom: 2em;
+  color: black;
+  padding-bottom: 30em;
   padding-top: 1em;
+  background-repeat: no-repeat;
 }
 
 .login {
@@ -95,6 +97,10 @@ button:hover {
 .homepage {
   color: black;
   padding-top: 0.75rem;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: auto;
+  font-family: inherit;
 }
 
 .wholepage {

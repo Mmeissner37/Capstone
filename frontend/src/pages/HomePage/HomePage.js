@@ -14,7 +14,7 @@ const HomePage = () => {
 
   return (
     <div className="wholepage">
-      <div className="container">
+
         <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>
@@ -26,7 +26,7 @@ const HomePage = () => {
             <ProfileForm />
             <PrescriptionForm />
         </div>
-      </div>
+
       <div className="calender-header">
         <h1>Welcome to the Calendar!</h1><br></br>
         <h2>Here you can schedule an appointment with Local Paws Animal Clinic</h2><br></br>

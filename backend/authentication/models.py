@@ -17,3 +17,7 @@ class User(AbstractUser):
     # is_student = models.BooleanField('student status', default=False)
 
     is_owner = models.BooleanField('owner status', default=False)
+
+# class Owner(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True) 
+

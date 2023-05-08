@@ -27,6 +27,7 @@ function App() {
         <div className="whole-page">
           <Routes>
             <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>}/>
+            <Route path="/vets" element={<PrivateRoute><VetHomePage /></PrivateRoute>}/>
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />

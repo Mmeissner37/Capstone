@@ -33,7 +33,7 @@ const VetProfilePresenter = () => {
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
-                        <div className='present-profile'> 
+                        <div className='present-profile'>
                             <div className='indiv-profile'>
                                 Owner: {petprofile.user.username}<br></br>
                                 ID: {petprofile.id}<br></br>

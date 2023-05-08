@@ -10,6 +10,7 @@ const RegisterPage = () => {
     password: "",
     firstName: "",
     lastName: "",
+    is_owner: false
   };
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
@@ -62,6 +63,15 @@ const RegisterPage = () => {
               type="text"
               name="password"
               value={formData.password}
+              onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            Check here if you are an owner
+            <input
+              type="checkbox"
+              name="is_owner"
+              value={formData.is_owner}
               onChange={handleInputChange}
             />
           </label>

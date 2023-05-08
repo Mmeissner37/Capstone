@@ -35,6 +35,7 @@ export const AuthProvider = ({ children }) => {
         email: registerData.email,
         first_name: registerData.firstName,
         last_name: registerData.lastName,
+        is_owner: registerData.is_owner,
       };
       let response = await axios.post(`${BASE_URL}/register/`, finalData);
       if (response.status === 201) {
@@ -58,7 +59,11 @@ export const AuthProvider = ({ children }) => {
         let loggedInUser = jwtDecode(response.data.access);
         setUser(setUserObject(loggedInUser));
         setIsServerError(false);
-        navigate("/");
+        if(loggedInUser.is_owner) {
+          navigate("/");
+        } else if (loggedInUser.is_owner === false) {
+          navigate("/vets")
+        }
       } else {
         navigate("/register");
       }
