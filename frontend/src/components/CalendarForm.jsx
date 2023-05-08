@@ -22,7 +22,8 @@ const CalendarForm = () => {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
-            })
+            });
+            navigate('/')
         } catch (error) {
             console.log(error.response.data)
         }

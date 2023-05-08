@@ -54,7 +54,6 @@ const MyCalendar = () => {
                 end: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
             height= {650}
-            width={400}
             businessHours= {{
                 daysOfWeek: [1, 2, 3, 5],
                 start: '10:00',

@@ -3,18 +3,15 @@ import VetProfilePresenter from "../../components/VetProfilePresenter";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 
-
 import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from "@fullcalendar/interaction";
+import listPlugin from '@fullcalendar/list';
 
 
 const VetHomePage = () => {
   const [user, token] = useAuth();
   const [appts, setAppts] = useState([]);
 
-  //Error ==== useEffect not defined??
+
 
  useEffect (() => {
   const seeAppts = async() => {
@@ -24,7 +21,15 @@ const VetHomePage = () => {
           Authorization: 'Bearer ' + token,
         },
       });
-      setAppts(response.data);
+      let customResponse = response.data.map((el,id)=>{
+        return{
+            id:id,
+            start: el.appt_date + "T" + el.start,
+            end: el.appt_date + "T" + el.end,
+            title: el.title
+        }
+    })
+      setAppts(customResponse);
     } catch(error) {
       console.log(error.response.data)
     }
@@ -33,8 +38,7 @@ const VetHomePage = () => {
  }, [token])
 
 
-
-  return (
+  return appts && (
     <div className="vet-homepage">
       <div className="container-md">
         <div className="container-header">
@@ -46,8 +50,33 @@ const VetHomePage = () => {
       </div>
       <div className="calender-header">
         <h1>Welcome Local Paws Animal Clinic!</h1>
-        <h4>See all your scheduled appointments below</h4><br></br>
-        <div>
+        <h4>See all your scheduled appointments below:</h4><br></br>
+        <FullCalendar 
+          events={appts}
+          plugins={[listPlugin]}
+          initialView='listWeek'
+          views= {{
+            listDay: { buttonText: 'list day' },
+            listWeek: { buttonText: 'list week' },
+            listMonth: { buttonText: 'list month' }
+          }}
+          headerToolbar= {{
+            left: 'title',
+            center: '',
+            right: 'listDay,listWeek,listMonth'
+          }}
+        /><br></br>
+        <br></br>
+      </div>
+    </div>
+
+  );
+};
+
+export default VetHomePage;
+
+//Maping through appointments to display in list form--NOT using fullcalendar
+        /* <div>
           {appts && 
           appts.map((appointments) =>
             <ol key={appointments.id}>
@@ -59,12 +88,4 @@ const VetHomePage = () => {
                 End Time: {appointments.end}<br></br>
               </div><br></br>
             </ol>)}
-        </div>
-        <br></br>
-      </div>
-    </div>
-
-  );
-};
-
-export default VetHomePage;
+        </div> */
