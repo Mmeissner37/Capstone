@@ -165,6 +165,23 @@ button:hover {
   text-align: center;
 }
 
+.vetsorter {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 1rem;
+  gap: 1rem;
+}
+
+.vetprofile {
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
 .present-profile {
   border: solid black;
   display: flex;
@@ -175,6 +192,12 @@ button:hover {
   background-color: rgb(228, 222, 222);
   padding-left: 0.5rem;
   text-decoration: none;
+}
+
+.vetindiv-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .indiv-profile {

@@ -30,11 +30,12 @@ const VetProfilePresenter = () => {
     return (
         <div>
             <div>
+                <div className='vetsorter'>
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
-                        <div className='present-profile'>
-                            <div className='indiv-profile'>
+                        <div className='vetprofile'>
+                            <div className='vetindiv-profile'>
                                 Owner: {petprofile.user.username}<br></br>
                                 ID: {petprofile.id}<br></br>
                                 Pet Name: {petprofile.pet_name}<br></br>
@@ -53,6 +54,7 @@ const VetProfilePresenter = () => {
                             <br></br>
                         </div>
                     </ol>)}<br></br>
+                </div>
             </div>
         </div>
     )
