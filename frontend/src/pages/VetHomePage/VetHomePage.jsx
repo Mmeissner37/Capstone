@@ -44,9 +44,6 @@ const VetHomePage = () => {
         <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
         </div>
-        <div>
-            <VetProfilePresenter />
-        </div>
       </div>
       <div className="calender-header">
         <h1>Welcome Local Paws Animal Clinic!</h1>
@@ -62,12 +59,15 @@ const VetHomePage = () => {
           }}
           headerToolbar= {{
             left: 'title',
-            center: '',
-            right: 'listDay,listWeek,listMonth'
+            center: 'listDay,listWeek,listMonth',
+            right: 'today prev,next'
           }}
         /><br></br>
         <br></br>
       </div>
+      <div>
+            <VetProfilePresenter />
+        </div>
     </div>
 
   );

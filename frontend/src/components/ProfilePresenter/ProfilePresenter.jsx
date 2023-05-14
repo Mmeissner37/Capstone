@@ -47,7 +47,7 @@ const ProfilePresenter = () => {
                                 Breed: {petprofile.breed}<br></br>
                                 Date of Birth: {petprofile.date_of_birth}<br></br>
                                 <div>
-                                    <h4>Add Profile Picture:</h4>
+                                    <h4>Profile Picture:</h4>
                                     <img src= {`http://127.0.0.1:8000${petprofile.image_url}/`} height='250px' width='200px' alt='Profile image'/>
                                     <CreateImage petID={petprofile.id}/>
                                 </div>

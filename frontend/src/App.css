@@ -114,7 +114,7 @@ button:hover {
   background-image: url(https://img.freepik.com/premium-photo/cat-paws-stethoscope-blue-background-concept-veterinary-medicine-taking-care-pets-copy-space_76158-860.jpg?w=2000);
   height: auto;
   width: auto;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .calendar {

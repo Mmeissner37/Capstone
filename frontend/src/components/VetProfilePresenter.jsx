@@ -30,6 +30,7 @@ const VetProfilePresenter = () => {
     return (
         <div>
             <div>
+                {/* <input type='search' placeholder='Search profiles'  **ADD SEARCH FUNCTION/> */} 
                 <div className='vetsorter'>
                 {pets &&
                 pets.map((petprofile) =>
