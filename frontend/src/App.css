@@ -42,6 +42,15 @@ button:hover {
   font-family: inherit;
 }
 
+.container-button {
+  margin-right: 1rem;
+  overflow: auto;
+  text-align: right;
+  padding-top: 1rem;
+  font-family: inherit;
+  color: white;
+}
+
 .container-header {
   align-items: center;
   text-align: center;
@@ -235,3 +244,11 @@ button:hover {
   text-decoration: none;
   font-size: medium;
 }
+
+.search-vets {
+  margin-left: 1rem;
+  padding-top: 1rem;
+  font-family: inherit;
+}
+
+

@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
   const { registerUser } = useContext(AuthContext);
   const defaultValues = {
     username: "",
@@ -66,21 +68,20 @@ const RegisterPage = () => {
               onChange={handleInputChange}
             />
           </label>
-          <label>
-            Check here if you are an owner
-            <input
-              type="checkbox"
-              name="is_owner"
-              value={formData.is_owner}
-              onChange={handleInputChange}
-            />
+          <label> Check here if you are an owner:
+          <input type="checkbox" name="is_owner" value={formData.is_owner} onChange={handleInputChange} />
           </label>
           <p style={{ fontSize: "12px" }}>
             NOTE: Make this an uncommon password with characters, numbers, and
             special characters!
           </p>
           <button>Register!</button>
-        </form>
+        </form><br></br>
+        <br></br>
+      </div>
+      <div className="container-button">
+        <label>Not the referring veterinarian?</label><br></br>
+        <button onClick={()=> navigate('/guestlogin')}>Click Here!</button>
       </div>
     </div>
   );

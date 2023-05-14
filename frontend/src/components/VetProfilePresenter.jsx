@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import PetDrugs from './PetDrugs';
 import useAuth from '../hooks/useAuth';
 
@@ -8,8 +7,8 @@ import useAuth from '../hooks/useAuth';
 const VetProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
-    const navigate = useNavigate();
-    
+    const [searchInput, setSearchInput] = useState('');
+ 
 
     useEffect (() => {
         const fetchPets = async() => {
@@ -27,17 +26,42 @@ const VetProfilePresenter = () => {
         fetchPets();
     }, [token]);
 
+//SEARCH FUNCTION INCOMPLETE--won't return results
+    // function handleSubmit(event) {
+    //     debugger
+    //     event.preventDefault();
+    //     filterPets(searchInput)
+    // }
+
+    // function filterPets(searchInput) {
+    //     let filteredResults = pets.filter((el) =>{
+    //         if (el.user.last_name.includes(searchInput)) {
+    //             return true;
+    //         }
+    //     });
+    //     setPets(filteredResults)
+    // }
+
+    
     return (
         <div>
             <div>
-                {/* <input type='search' placeholder='Search profiles'  **ADD SEARCH FUNCTION/> */} 
+                {/* <div className='search-vets'>
+                    <h3>Search Profiles</h3>
+                    <form onSubmit={handleSubmit}>
+                    <label className='search'>Search</label>
+                    <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search Owner' /><br></br>
+                    <br></br>
+                    <button>Find Pets Profiles</button>
+                </form>
+                </div> */}
                 <div className='vetsorter'>
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
                         <div className='vetprofile'>
                             <div className='vetindiv-profile'>
-                                Owner: {petprofile.user.username}<br></br>
+                                Owner: {petprofile.user.first_name} {petprofile.user.last_name}<br></br>
                                 <br></br>
                                 ID: {petprofile.id}<br></br>
                                 <br></br>

@@ -33,15 +33,19 @@ const ProfileForm = () => {
     return ( 
         <div className="container">
             <h3>Add New Pets!</h3><br></br>
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="drug-form" onSubmit={handleSubmit}>
                 <label>Pet Name: {" "}
-                <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} /></label>
+                <input type='text' name='pet_name' value={formData.pet_name} onChange={handleInputChange} /></label><br></br>
+                <br></br>
                 <label>Species: {" "}
-                <input type="text" name='species' value={formData.species} onChange={handleInputChange} /></label>
+                <input type="text" name='species' value={formData.species} onChange={handleInputChange} /></label><br></br>
+                <br></br>
                 <label className="pet-form">Breed: {" "}
-                <input type="text" name='breed' value={formData.breed} onChange={handleInputChange} /></label>
+                <input type="text" name='breed' value={formData.breed} onChange={handleInputChange} /></label><br></br>
+                <br></br>
                 <label className="pet-form">Date of Birth: {" "}
-                <input type="date" name='date_of_birth' value={formData.date_of_birth} onChange={handleInputChange} /></label>
+                <input type="date" name='date_of_birth' value={formData.date_of_birth} onChange={handleInputChange} /></label><br></br>
+                <br></br>
                 <button>Add PawPrints</button><br></br>
             </form>
         </div>

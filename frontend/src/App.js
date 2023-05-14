@@ -11,6 +11,9 @@ import AddPrescriptionPage from "./pages/AddPrescriptionPage/AddPrescriptionPage
 import UpdateDrugPage from "./pages/UpdateDrugPage/UpdateDrugPage";
 import DeletePrescriptionPage from "./pages/DeletePrescriptionPage/DeletePrescriptionPage";
 import VetHomePage from "./pages/VetHomePage/VetHomePage";
+import GuestVetPage from "./pages/GuestVetPage/GuestVetPage";
+import GuestLoginPage from "./pages/GuestLoginPage/GuestLoginPage";
+
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -30,6 +33,8 @@ function App() {
             <Route path="/vets" element={<PrivateRoute><VetHomePage /></PrivateRoute>}/>
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/guestlogin" element={<GuestLoginPage />} />
+            <Route path="/guestvet" element={<GuestVetPage />} />
             <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
             <Route path="/createdrug" element={<PrivateRoute><AddPrescriptionPage /></PrivateRoute>} />
             <Route path="/updatedrug" element={<PrivateRoute><UpdateDrugPage /></PrivateRoute>} />
