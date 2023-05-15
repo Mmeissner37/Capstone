@@ -38,19 +38,18 @@ const VetProfilePresenter = () => {
             if (el.user.last_name.includes(searchInput)) {
                 return true;
             }
-        });
-        setPets(filteredResults)
+        })
+        setPets(filteredResults);
     }
 
-    
     return (
         <div>
             <div>
                 <div className='search-vets'>
                     <h2>Search Profiles</h2>
                     <form onSubmit={handleSubmit}>
-                        <label className='search'>Search</label>
-                        <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search Owner' /><br></br>
+                        <label className='search'>Search: </label>
+                        <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search by Owner' /><br></br>
                         <br></br>
                         <button>Find Pets Profiles</button>
                     </form>

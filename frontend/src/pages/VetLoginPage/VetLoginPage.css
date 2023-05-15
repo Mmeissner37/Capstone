@@ -3,13 +3,24 @@
   }
   
   
-.login {
+  .vetlogin {
     background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
     height: fixed;
     width: 100%;
-    padding-bottom: 50rem;
+    padding-bottom: 25em;
     padding-top: 0.5em;
     background-repeat: no-repeat;
     background-size: 100%;
-  }
-  
+  } 
+
+
+.vetwelcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 250px;
+}

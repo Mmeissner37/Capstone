@@ -18,7 +18,7 @@ const LoginPage = () => {
   }, [isServerError]);
 
   return (
-    <div className="login">
+    <div className="guestlogin">
       <div className="container">
                 <h3>Hello fellow veterinary professional!</h3><br></br>
                 <h3>Please enter the provided login information to access pet profiles</h3><br></br>

@@ -21,7 +21,7 @@ const VetLoginPage = () => {
   }, [isServerError]);
 
   return (
-    <div className="login">
+    <div className="vetlogin">
       <div className="container">
         <h2>Welcome Local Paws Animal Clinic!</h2><br></br>
         <h3>Login in below to view your appointments</h3><br></br>
@@ -52,6 +52,10 @@ const VetLoginPage = () => {
           <button>Login!</button>
         </form><br></br>
         <br></br>
+        <div className="vetwelcome-section">
+                <h3>From a speciality veterinary practice?</h3><br></br>
+            <button onClick={() => navigate('/guestlogin')}>Be Our Guest</button>
+        </div>
       </div>
     </div>
   );

@@ -56,10 +56,6 @@ const LoginPage = () => {
         </form><br></br>
         <br></br>
       </div>
-      <div className="container-button">
-        <label>Not the referring veterinarian?</label><br></br>
-        <button onClick={()=> navigate('/guestlogin')}>Click Here!</button>
-      </div>
     </div>
   );
 };

@@ -2,14 +2,12 @@
     color: red;
   }
   
-  
-  .login {
+  .guestlogin {
     background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
-    height: 100%;
+    height: fixed;
     width: 100%;
     padding-bottom: 25em;
     padding-top: 0.5em;
     background-repeat: no-repeat;
     background-size: 100%;
-  }
-  
+  } 

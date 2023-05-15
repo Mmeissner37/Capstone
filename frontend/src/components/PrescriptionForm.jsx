@@ -25,7 +25,7 @@ const AddPrescription = () => {
                     Authorization: 'Bearer ' + token
                 }
             })
-            navigate('/')
+            navigate('/profiles')
         } catch (error) {
             console.log(error.response.data)
         }
