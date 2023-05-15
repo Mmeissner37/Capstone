@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-
 class User(AbstractUser):
     pass 
     '''
@@ -17,7 +16,12 @@ class User(AbstractUser):
     # is_student = models.BooleanField('student status', default=False)
 
     is_owner = models.BooleanField('owner status', default=False)
+    is_vet = models.BooleanField('vet status', default=False)
+    is_guest = models.BooleanField('guest status', default=False)
 
 # class Owner(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True) 
 
+    # class Owner(models.Model):
+    #     user = models.ForeignKey(User)
+    #     pets = models.ForeignKey(PetProfile)
