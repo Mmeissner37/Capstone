@@ -63,11 +63,12 @@ export const AuthProvider = ({ children }) => {
         setIsServerError(false);
         if(loggedInUser.is_owner) {
           navigate("/");
-        } else if (loggedInUser.is_vet) {
-          navigate("/vets")
+        } 
+        else if (loggedInUser.is_vet) {
+        navigate("/vets")
         }
-          else if (loggedInUser.is_guest){
-            navigate("/guestvet")
+        else if (loggedInUser.is_guest){
+        navigate("/guestvet")
           }
       } else {
         navigate("/register");

@@ -7,7 +7,7 @@ import useAuth from '../hooks/useAuth';
 const VetProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
-    const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState([]);
  
 
     useEffect (() => {
@@ -27,34 +27,34 @@ const VetProfilePresenter = () => {
     }, [token]);
 
 //SEARCH FUNCTION INCOMPLETE--won't return results
-    // function handleSubmit(event) {
-    //     debugger
-    //     event.preventDefault();
-    //     filterPets(searchInput)
-    // }
+    function handleSubmit(event) {
+        debugger
+        event.preventDefault();
+        filterPets(searchInput)
+    }
 
-    // function filterPets(searchInput) {
-    //     let filteredResults = pets.filter((el) =>{
-    //         if (el.user.last_name.includes(searchInput)) {
-    //             return true;
-    //         }
-    //     });
-    //     setPets(filteredResults)
-    // }
+    function filterPets(searchInput) {
+        let filteredResults = pets.filter((el) =>{
+            if (el.user.last_name.includes(searchInput)) {
+                return true;
+            }
+        });
+        setPets(filteredResults)
+    }
 
     
     return (
         <div>
             <div>
-                {/* <div className='search-vets'>
-                    <h3>Search Profiles</h3>
+                <div className='search-vets'>
+                    <h2>Search Profiles</h2>
                     <form onSubmit={handleSubmit}>
-                    <label className='search'>Search</label>
-                    <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search Owner' /><br></br>
-                    <br></br>
-                    <button>Find Pets Profiles</button>
-                </form>
-                </div> */}
+                        <label className='search'>Search</label>
+                        <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search Owner' /><br></br>
+                        <br></br>
+                        <button>Find Pets Profiles</button>
+                    </form>
+                </div>
                 <div className='vetsorter'>
                 {pets &&
                 pets.map((petprofile) =>

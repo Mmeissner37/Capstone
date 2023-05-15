@@ -1,0 +1,15 @@
+.error {
+    color: red;
+  }
+  
+  
+.login {
+    background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
+    height: fixed;
+    width: 100%;
+    padding-bottom: 50rem;
+    padding-top: 0.5em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  

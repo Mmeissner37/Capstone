@@ -13,6 +13,8 @@ import DeletePrescriptionPage from "./pages/DeletePrescriptionPage/DeletePrescri
 import VetHomePage from "./pages/VetHomePage/VetHomePage";
 import GuestVetPage from "./pages/GuestVetPage/GuestVetPage";
 import GuestLoginPage from "./pages/GuestLoginPage/GuestLoginPage";
+import WelcomePage from "./pages/WelcomePage/WelcomePage";
+import VetLoginPage from "./pages/VetLoginPage/VetLoginPage";
 
 
 // Component Imports
@@ -33,8 +35,10 @@ function App() {
             <Route path="/vets" element={<PrivateRoute><VetHomePage /></PrivateRoute>}/>
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/vetlogin" element={<VetLoginPage />} />
+            <Route path="/welcome" element={<WelcomePage />} />
             <Route path="/guestlogin" element={<GuestLoginPage />} />
-            <Route path="/guestvet" element={<GuestVetPage />} />
+            <Route path="/guestvet" element={<PrivateRoute><GuestVetPage /></PrivateRoute>} />
             <Route path="/profiles" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
             <Route path="/createdrug" element={<PrivateRoute><AddPrescriptionPage /></PrivateRoute>} />
             <Route path="/updatedrug" element={<PrivateRoute><UpdateDrugPage /></PrivateRoute>} />

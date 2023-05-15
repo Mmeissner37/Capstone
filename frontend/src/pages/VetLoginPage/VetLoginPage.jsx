@@ -1,16 +1,19 @@
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
-import './GuestLoginPage.css'
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./VetLoginPage.css";
 
-const LoginPage = () => {
-    const { loginUser, isServerError } = useContext(AuthContext);
-    const defaultValues = { password: "" };
-    const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(
-      defaultValues,
-      loginUser
-    );
-  
+const VetLoginPage = () => {
+  const { loginUser, isServerError } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const defaultValues = { username: "", password: "" };
+  const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(
+    defaultValues,
+    loginUser
+  );
+
   useEffect(() => {
     if (isServerError) {
       reset();
@@ -20,11 +23,12 @@ const LoginPage = () => {
   return (
     <div className="login">
       <div className="container">
-                <h3>Hello fellow veterinary professional!</h3><br></br>
-                <h3>Please enter the provided login information to access pet profiles</h3><br></br>
+        <h2>Welcome Local Paws Animal Clinic!</h2><br></br>
+        <h3>Login in below to view your appointments</h3><br></br>
+        <br></br>
         <br></br>
         <form className="form" onSubmit={handleSubmit}>
-        <label>
+          <label>
             Username:{" "}
             <input
               type="text"
@@ -34,7 +38,7 @@ const LoginPage = () => {
             />
           </label>
           <label>
-            What's the secret word?{" "}
+            Password:{" "}
             <input
               type="text"
               name="password"
@@ -45,7 +49,7 @@ const LoginPage = () => {
           {isServerError ? (
             <p className="error">Login failed, incorrect credentials!</p>
           ) : null}
-          <button>Enter!</button>
+          <button>Login!</button>
         </form><br></br>
         <br></br>
       </div>
@@ -53,4 +57,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default VetLoginPage;

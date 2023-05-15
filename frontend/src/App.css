@@ -197,6 +197,7 @@ button:hover {
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   padding-top: 1rem;
+  margin-top: 1rem;
   background-color: aliceblue;
 }
 
@@ -208,7 +209,9 @@ button:hover {
   margin-bottom: 1rem;
   gap: 1rem;
   background-color: rgb(228, 222, 222);
-  padding-left: 0.5rem;
+  padding-left: 0.75rem;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
   text-decoration: none;
 }
 

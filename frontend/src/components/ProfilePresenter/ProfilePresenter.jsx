@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './ProfilePresenter.css'
 
 import PetDrugs from '../PetDrugs';
 import CreateImage from '../CreateImageForm';

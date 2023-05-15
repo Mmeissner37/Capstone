@@ -9,6 +9,8 @@ const useCustomForm = (initialValues = {}, onSubmit) => {
       setFormValues({ ...formData, [e.target.name]: e.target.checked });
     } else if (e.target.name === 'is_guest') {
       setFormValues({...formData, [e.target.name]: e.target.checked});
+    } else if (e.target.name === 'is_vet') {
+      setFormValues({...formData, [e.target.name]: e.target.checked})
     }
      else {
       setFormValues({ ...formData, [e.target.name]: e.target.value });
