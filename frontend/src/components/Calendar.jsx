@@ -36,8 +36,6 @@ const MyCalendar = () => {
             })
         setAppts(customResponse);
     }
-    
-
 
     return appts && (
         <div className="calendar">

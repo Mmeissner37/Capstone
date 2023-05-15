@@ -4,6 +4,7 @@ import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import MyCalendar from "../../components/Calendar";
 import PrescriptionForm from '../../components/PrescriptionForm';
 import CalendarForm from "../../components/CalendarForm";
+import './HomePage.css'
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -14,7 +15,6 @@ const HomePage = () => {
 
   return (
     <div className="wholepage">
-
         <div className="container-header">
           <h1>Home Page for {user.username}!</h1><br></br>
           <h4>See Profiles</h4>

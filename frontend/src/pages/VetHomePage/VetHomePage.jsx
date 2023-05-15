@@ -71,7 +71,7 @@ const VetHomePage = () => {
             <div className="ref">
                 <h3>Referring a patient to a specialist?</h3>
                 <h3>Fellow veterinary professional requiring access to profiles?</h3><br></br>
-                <h3>Provide the requesting veterinary professional with the guest access using the credentials below:</h3><br></br>
+                <h3>Provide them with guest access using the credentials below:</h3><br></br>
                 <h4>Username: GuestVet</h4>
                 <h4>Password: LocalPawsGuest1</h4>
             </div>

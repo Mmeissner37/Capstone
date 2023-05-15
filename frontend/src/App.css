@@ -86,32 +86,13 @@ button:hover {
   font-size: 17px;
 }
 
-.reg-page{
-  background-image: url(https://a-static.besthdwallpaper.com/dog-in-the-beach-wallpaper-1600x900-10767_47.jpg);
-  height: 100%;
-  width: 100%;
-  color: black;
-  padding-bottom: 30em;
-  padding-top: 1em;
-  background-repeat: no-repeat;
-}
-
-.login {
+/* .login {
   background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
   height: auto;
   width: auto;
   padding-bottom: 50em;
   background-repeat: no-repeat;
-}
-
-.homepage {
-  color: black;
-  padding-top: 0.75rem;
-  max-width: 750px;
-  margin: 0 auto;
-  overflow: auto;
-  font-family: inherit;
-}
+} */
 
 .wholepage {
   background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
@@ -120,41 +101,11 @@ button:hover {
   background-repeat: repeat;
 }
 
-.vet-homepage {
-  background-image: url(https://img.freepik.com/premium-photo/cat-paws-stethoscope-blue-background-concept-veterinary-medicine-taking-care-pets-copy-space_76158-860.jpg?w=2000);
-  height: auto;
-  width: auto;
-  background-repeat: repeat;
-}
-
 .calendar {
   background-color: white;
   margin-left: 5rem;
   margin-right: 5rem;
   align-items: center;
-}
-
-.calender-header {
-  align-items: center;
-  width: 71%;
-  background: rgb(228, 222, 222);
-  border: solid black;
-  margin-top: 1rem;
-  margin-left: 10rem;
-  margin-right: 15rem;
-  padding: 0.5rem 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.homepage {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  padding-top: 1rem;
-  border-top: solid black;
-  border-bottom: solid black;
 }
 
 .petdrugs {

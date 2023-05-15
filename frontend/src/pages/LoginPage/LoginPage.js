@@ -25,7 +25,7 @@ const LoginPage = () => {
       <div className="container">
         <h2>Welcome to Pawrent Helper!</h2><br></br>
         <h3>We're here to help you organize your furry crew and their medications so you can spend more time relaxing.</h3><br></br>
-        <h3>Create Pet Profiles, keep track of current prescriptions, and schedule appointments with Local Paws Animal Clinic.</h3><br></br>
+        <h3>Create Pet Profiles, keep track of current medications, and schedule appointments with Local Paws Animal Clinic.</h3><br></br>
         <h3>We're here to help you so you can help them.</h3>
         <br></br>
         <br></br>

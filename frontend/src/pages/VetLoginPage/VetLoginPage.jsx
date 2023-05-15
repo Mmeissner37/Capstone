@@ -1,13 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import "./VetLoginPage.css";
 
 const VetLoginPage = () => {
   const { loginUser, isServerError } = useContext(AuthContext);
-  const navigate = useNavigate();
   const defaultValues = { username: "", password: "" };
   const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(
     defaultValues,
@@ -52,10 +49,6 @@ const VetLoginPage = () => {
           <button>Login!</button>
         </form><br></br>
         <br></br>
-        <div className="vetwelcome-section">
-                <h3>From a speciality veterinary practice?</h3><br></br>
-            <button onClick={() => navigate('/guestlogin')}>Be Our Guest</button>
-        </div>
       </div>
     </div>
   );

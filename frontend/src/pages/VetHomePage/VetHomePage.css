@@ -6,3 +6,12 @@
     padding: 0.5rem;
     margin-bottom: 1.5rem;
 }
+
+.vet-homepage {
+    background-image: url(https://img.freepik.com/premium-photo/cat-paws-stethoscope-blue-background-concept-veterinary-medicine-taking-care-pets-copy-space_76158-860.jpg?w=2000);
+    height: auto;
+    width: auto;
+    background-repeat: repeat;
+    background-size: 100%;
+  }
+  

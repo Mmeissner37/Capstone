@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const CalendarForm = () => {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
-            });
+            })
             navigate('/')
         } catch (error) {
             console.log(error.response.data)

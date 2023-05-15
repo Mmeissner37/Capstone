@@ -6,7 +6,7 @@ const WelcomePage = () => {
     const navigate = useNavigate();
 
     return ( 
-        <div className='welcome'>
+        <div className='welcome-page'>
             <div>
                 <div className='header'>
                     <h1>Welcome!</h1>
@@ -21,7 +21,10 @@ const WelcomePage = () => {
                         <h3>Welcome back Local Paws Animal Clinic!</h3><br></br>
                         <button onClick={() => navigate('/vetlogin')}>Login Here</button>
                     </div>
-
+                    <div className="welcome-section">
+                        <h3>From a speciality veterinary practice?</h3><br></br>
+                        <button onClick={() => navigate('/guestlogin')}>Be Our Guest</button>
+                    </div>
                 </div>
             </div>
         </div>
