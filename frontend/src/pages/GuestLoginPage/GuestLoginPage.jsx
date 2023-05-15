@@ -3,7 +3,7 @@ import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import './GuestLoginPage.css'
 
 const LoginPage = () => {
     const navigate = useNavigate();

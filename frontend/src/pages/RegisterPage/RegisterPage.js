@@ -12,7 +12,9 @@ const RegisterPage = () => {
     password: "",
     firstName: "",
     lastName: "",
-    is_owner: false
+    is_owner: false,
+    is_vet: false,
+    is_guest: false
   };
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
@@ -70,6 +72,9 @@ const RegisterPage = () => {
           </label>
           <label> Check here if you are an owner:
           <input type="checkbox" name="is_owner" value={formData.is_owner} onChange={handleInputChange} />
+          </label>
+          <label> Check here if you are a guest:
+          <input type="checkbox" name="is_guest" value={formData.is_guest} onChange={handleInputChange} />
           </label>
           <p style={{ fontSize: "12px" }}>
             NOTE: Make this an uncommon password with characters, numbers, and

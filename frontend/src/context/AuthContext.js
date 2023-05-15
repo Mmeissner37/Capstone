@@ -36,6 +36,8 @@ export const AuthProvider = ({ children }) => {
         first_name: registerData.firstName,
         last_name: registerData.lastName,
         is_owner: registerData.is_owner,
+        is_vet: registerData.is_vet,
+        is_guest: registerData.is_guest,
       };
       let response = await axios.post(`${BASE_URL}/register/`, finalData);
       if (response.status === 201) {
@@ -61,9 +63,12 @@ export const AuthProvider = ({ children }) => {
         setIsServerError(false);
         if(loggedInUser.is_owner) {
           navigate("/");
-        } else if (loggedInUser.is_owner === false) {
+        } else if (loggedInUser.is_vet) {
           navigate("/vets")
         }
+          else if (loggedInUser.is_guest){
+            navigate("/guestvet")
+          }
       } else {
         navigate("/register");
       }

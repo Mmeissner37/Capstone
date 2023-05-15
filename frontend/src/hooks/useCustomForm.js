@@ -7,7 +7,10 @@ const useCustomForm = (initialValues = {}, onSubmit) => {
     e.persist();
     if (e.target.name === "is_owner") {
       setFormValues({ ...formData, [e.target.name]: e.target.checked });
-    } else {
+    } else if (e.target.name === 'is_guest') {
+      setFormValues({...formData, [e.target.name]: e.target.checked});
+    }
+     else {
       setFormValues({ ...formData, [e.target.name]: e.target.value });
     }
   };

@@ -5,9 +5,9 @@
 
 .login {
   background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
-  height: auto;
+  height: fixed;
   width: 100%;
-  padding-bottom: 25em;
+  padding-bottom: 5em;
   padding-top: 0.5em;
   background-repeat: no-repeat;
   background-size: 100%;
