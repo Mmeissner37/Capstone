@@ -26,7 +26,6 @@ const VetProfilePresenter = () => {
         fetchPets();
     }, [token]);
 
-//SEARCH FUNCTION INCOMPLETE--won't return results
     function handleSubmit(event) {
         debugger
         event.preventDefault();
@@ -51,7 +50,7 @@ const VetProfilePresenter = () => {
                         <label className='search'>Search: </label>
                         <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search by Owner' /><br></br>
                         <br></br>
-                        <button>Find Pets Profiles</button>
+                        <button>Search</button>
                     </form>
                 </div>
                 <div className='vetsorter'>

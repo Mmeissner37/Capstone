@@ -1,4 +1,49 @@
-.profiles {
-    border-bottom: 4px solid #000000;
+.profile-header {
+    text-align: center;
+  }
+
+.ownerprofiles {
+  height: 100%;
+  width: 100%;
 }
 
+  .grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: row;
+      overflow: auto;
+      margin: 1rem 1rem;
+      gap: 1rem;
+    }
+  
+  
+  .present-profile {
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    background-color: rgb(228, 222, 222);
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+  }
+
+  .indiv-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+  }
+  
+  .image-form {
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .drug-buttons {
+    display: flex;
+    gap: 1rem;
+  }

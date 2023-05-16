@@ -43,7 +43,6 @@ const ProfilePresenter = () => {
                             <h3>{petprofile.pet_name}</h3>
                             <div className='indiv-profile'>
                                 ID: {petprofile.id}<br></br>
-                                {/* Name: {petprofile.pet_name}<br></br> */}
                                 Species: {petprofile.species}<br></br>
                                 Breed: {petprofile.breed}<br></br>
                                 Date of Birth: {petprofile.date_of_birth}<br></br>
@@ -65,7 +64,7 @@ const ProfilePresenter = () => {
                             <br></br>
                         </div>
                     </ol>)}<br></br>
-            </div>
+                </div>
         </div>
     )
 }
