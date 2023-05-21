@@ -19,12 +19,9 @@
     padding-top: 1rem;
     border-top: solid black;
     border-bottom: solid black;
-  }
-  
-.homepage {
     color: black;
     padding-top: 0.75rem;
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
     overflow: auto;
     font-family: inherit;

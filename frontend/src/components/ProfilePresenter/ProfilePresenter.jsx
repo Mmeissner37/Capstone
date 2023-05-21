@@ -30,12 +30,10 @@ const ProfilePresenter = () => {
         fetchPets();
     }, [token]);
 
+
     return (
         <div>
-            <div className='profile-header'>
-                <h2>{user.username}'s Pets</h2><br></br>
-            </div>
-            <div>
+            <div className='pet-sorter'>
                 {pets &&
                 pets.map((petprofile) =>
                     <ol key={petprofile.id}>
@@ -51,20 +49,20 @@ const ProfilePresenter = () => {
                                     <img src= {`http://127.0.0.1:8000${petprofile.image_url}/`} height='250px' width='200px' alt='Profile image'/>
                                     <CreateImage petID={petprofile.id}/>
                                 </div>
-                            </div>
-                                Medications: 
+                            </div> 
                             <div className='profiledrugs'>
+                                Medications:
                                 <PetDrugs petID={petprofile.id} />
                             </div>
                             <div className='drug-buttons'>
                                 <button onClick={()=> navigate('/createdrug')}>Add Medications To Profile</button>
                                 <button onClick={()=> navigate('/updatedrug')}>Update A Medication</button>
                                 <button onClick={()=> navigate('/deletedrug')}>Delete A Medication</button>
-                            </div>
+                             </div>
                             <br></br>
                         </div>
                     </ol>)}<br></br>
-                </div>
+            </div>
         </div>
     )
 }

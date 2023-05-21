@@ -1,24 +1,12 @@
+
+
 .profile-header {
     text-align: center;
   }
 
-.ownerprofiles {
-  height: 100%;
-  width: 100%;
-}
-
-  .grid {
-      display: flex;
-      flex-direction: row;
-      justify-content: row;
-      overflow: auto;
-      margin: 1rem 1rem;
-      gap: 1rem;
-    }
-  
-  
   .present-profile {
     border: solid black;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,3 +35,13 @@
     display: flex;
     gap: 1rem;
   }
+
+  .pet-sorter {
+    display: flex;
+    flex-direction: row;
+    justify-content: row;
+    overflow: auto;
+    margin: 1rem 1rem;
+    gap: 1rem;
+  }
+  

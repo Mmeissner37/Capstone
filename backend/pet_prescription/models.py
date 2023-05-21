@@ -8,4 +8,6 @@ from prescriptions.models import Prescription
 class Pet_Prescription(models.Model):
     pet = models.ForeignKey(PetProfile, on_delete=models.CASCADE)
     prescription = models.ForeignKey(Prescription, on_delete=models.CASCADE)
-    
+
+
+    # prescription = models.ForeignKey(Prescription, on_delete=models.SET_NULL, null=True)
