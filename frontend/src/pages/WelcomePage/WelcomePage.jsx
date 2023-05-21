@@ -13,12 +13,12 @@ const WelcomePage = () => {
                 </div>
                 <div className='welcome-container'>
                     <div className='welcome-section'>
-                        <h3>Starting your Pawrent Helper journey?</h3>
-                        <h3>Please click the button below to login or register</h3><br></br>
+                        <h3>Starting your Pawrent Helper journey?</h3><br></br>
+                        {/* <h3>Please click the button below to login or register</h3><br></br> */}
                         <button onClick={() => navigate('/login')}>Let's Get Started!</button>
                     </div>
                     <div className='welcome-section'>
-                        <h3>Welcome back Local Paws Animal Clinic!</h3><br></br>
+                        <h3>Local Paws Animal Clinic</h3><br></br>
                         <button onClick={() => navigate('/vetlogin')}>Login Here</button>
                     </div>
                     <div className="welcome-section">

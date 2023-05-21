@@ -1,0 +1,11 @@
+.regvet-page{
+    background-image: url("C:\Users\mpmei\devCodeCamp_all\Capstone_RestAPI\dog-beach.jpeg");
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding-bottom: 30em;
+    padding-top: 3em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+

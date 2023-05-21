@@ -1,7 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import { Link } from "react-router-dom";
 import "./VetLoginPage.css";
+
 
 const VetLoginPage = () => {
   const { loginUser, isServerError } = useContext(AuthContext);
@@ -46,6 +48,7 @@ const VetLoginPage = () => {
           {isServerError ? (
             <p className="error">Login failed, incorrect credentials!</p>
           ) : null}
+          <Link to="/vetregister">Click to register!</Link>
           <button>Login!</button>
         </form><br></br>
         <br></br>

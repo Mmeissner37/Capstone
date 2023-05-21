@@ -15,6 +15,7 @@ import GuestVetPage from "./pages/GuestVetPage/GuestVetPage";
 import GuestLoginPage from "./pages/GuestLoginPage/GuestLoginPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import VetLoginPage from "./pages/VetLoginPage/VetLoginPage";
+import RegisterVetPage from "./pages/RegisterVetPage/RegisterVetPage";
 
 
 // Component Imports
@@ -34,6 +35,7 @@ function App() {
             <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>}/>
             <Route path="/vets" element={<PrivateRoute><VetHomePage /></PrivateRoute>}/>
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/vetregister" element={<RegisterVetPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/vetlogin" element={<VetLoginPage />} />
             <Route path="/welcome" element={<WelcomePage />} />

@@ -5,7 +5,7 @@ import './ProfilePage.css'
 const ProfilePage = () => {
 
     return ( 
-      <div className="wholepage">
+      <div className="profilepage">
           <div className="petcontainer">
             <div className="vetsorter">
               <ProfilePresenter />
