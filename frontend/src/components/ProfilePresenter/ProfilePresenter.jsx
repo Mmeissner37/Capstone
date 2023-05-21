@@ -51,13 +51,12 @@ function filterPets(searchInput) {
         <div>
             <div className='container'>
                 <div className='search-pets'>
-                    <h3>Looking for a particular pet?</h3>
-                        <form onSubmit={handleSubmit}>
-                            <label className='search'>Search: </label>
-                            <input onChange={(e) => setSearchInput(e.target.value)} type="text" placeholder='Search by Pet Name' /><br></br>
-                            <br></br>
-                            <button>Let's take a look!</button>
-                        </form>
+                    <form onSubmit={handleSubmit}>
+                        <label className='search'>Search: </label>
+                        <input onChange={(e) => setSearchInput(e.target.value)} type="text" placeholder='Search by Pet Name' /><br></br>
+                        <br></br>
+                        <button>Search</button>
+                    </form>
                 </div>
             </div>
             <div className='pet-sorter'>

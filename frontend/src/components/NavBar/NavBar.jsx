@@ -11,21 +11,17 @@ const Navbar = () => {
     <div className="navBar">
       <ul>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          {/* <Link to="/" style={{ textDecoration: "none", color: "white" }}> */}
             <b>Pawrent Helper</b>
-          </Link>
+          {/* </Link> */}
         </li>
-        <div className="nav-buttons">
-            <li>
-                <button onClick={()=> navigate('/profiles')}>Profiles</button>
-                <button onClick={()=> navigate('/')}>Home</button>
-            </li>
-        </div>
         <li>
+            <button onClick={()=> navigate('/')}>Home</button>
+            <button onClick={()=> navigate('/profiles')}>Profiles</button>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
           ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
+            <button onClick={() => navigate("/welcome")}>Login</button>
           )}
         </li>
       </ul>

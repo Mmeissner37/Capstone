@@ -13,7 +13,7 @@
  }
 
   .profilepage {
-    background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
+    background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL2pvYjE1NzEtcmVtaXgtMDVhLWEuanBn.jpg);
     height: 100%;
     width: 100%;
     background-repeat: repeat;
@@ -24,6 +24,7 @@
     font-family: inherit;
     padding-bottom: 1rem;
     padding-left: 3rem;
+    text-align: right;
   }
 
   .footer {

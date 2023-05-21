@@ -9,18 +9,18 @@ li {
 }
 
 .navBar {
-  background-image: url('https://t4.ftcdn.net/jpg/05/53/71/23/360_F_553712384_9ZQnDpbLqGwX8Fvv8jxEcHrRqhpVxpUr.jpg');
-  background-size: 100%;
+  background-image: url(https://thumbs.dreamstime.com/b/watercolor-cat-paw-print-white-paper-background-texture-pattern-185923759.jpg);
+  background-size: 15%;
   width: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   box-shadow: 4px 2px 5px gray;
-  color: white;
+  color: rgb(55, 195, 241);
   margin-bottom: 0.25rem;
-  padding: 1.5rem 2rem;
+  padding: 1.75rem 2rem;
 }
 
 .navBar button {
-  background: transparent;
+  background: rgb(55, 195, 241);
   border: 2px solid white;
   color: white;
   padding: 0.4rem 0.5rem;
@@ -28,7 +28,7 @@ li {
 
 .navBar button:hover {
   background: white;
-  color: steelblue;
+  color: rgb(55, 195, 241);
   cursor: pointer;
 }
 
@@ -37,6 +37,6 @@ li {
   font-size: 2rem;
 }
 
-.nav-buttons {
-  gap: 4rem;
-}
+/* background-image: url('https://t4.ftcdn.net/jpg/05/53/71/23/360_F_553712384_9ZQnDpbLqGwX8Fvv8jxEcHrRqhpVxpUr.jpg'); */
+/* background-image: url('https://thumbs.dreamstime.com/b/watercolor-cat-paw-print-white-paper-background-texture-pattern-185923759.jpg'); */
+

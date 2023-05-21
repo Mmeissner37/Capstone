@@ -18,7 +18,7 @@ p {
 }
 
 button {
-  background-color: rgb(217, 218, 213);
+  background-color: rgb(185, 230, 247);
   border: 2px solid black;
   color: black;
   font-size: 1rem;
@@ -29,8 +29,8 @@ button {
 
 button:hover {
   cursor: pointer;
-  color: white;
-  background-color: steelblue;
+  color: rgb(55, 195, 241);
+  background-color: white;
 }
 
 .container {
@@ -87,9 +87,10 @@ button:hover {
 }
 
 .wholepage {
-  background-image: url(https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg);
+  background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL2pvYjE1NzEtcmVtaXgtMDVhLWEuanBn.jpg);
+  /* background-image: url('https://img.freepik.com/free-vector/animal-background-with-cute-pets-illustration_53876-99291.jpg'); */
   height: auto;
-  background-size: 65%;
+  background-size: 100%;
   background-repeat: repeat;
   padding-top: 1rem;
 }
@@ -102,7 +103,8 @@ button:hover {
 }
 
 .petdrugs {
-  background-color: rgb(228, 222, 222);
+  background-color: white;
+  /* background-color: rgb(231, 233, 220); */
   text-align: left;
   display: flex;
   flex-direction: row;
@@ -115,7 +117,7 @@ button:hover {
 }
 
 .petlist {
-  background-color: rgb(228, 222, 222);
+  background-color: rgb(231, 233, 220);
   text-align: left;
   display: flex;
   flex-direction: row;
