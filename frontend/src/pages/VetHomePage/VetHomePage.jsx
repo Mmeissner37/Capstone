@@ -64,7 +64,7 @@ const VetHomePage = () => {
             }}
           />
         </div>
-        <div>
+        <div className="vet-profilepresenter">
           <VetProfilePresenter />
         </div>
         <div className="container">

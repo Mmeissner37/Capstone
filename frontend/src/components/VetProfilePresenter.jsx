@@ -27,14 +27,13 @@ const VetProfilePresenter = () => {
     }, [token]);
 
     function handleSubmit(event) {
-        debugger
         event.preventDefault();
         filterPets(searchInput)
     }
 
     function filterPets(searchInput) {
         let filteredResults = pets.filter((el) =>{
-            if (el.user.last_name.includes(searchInput)) {
+            if (el.pet_name.includes(searchInput)) {
                 return true;
             }
         })
@@ -48,7 +47,7 @@ const VetProfilePresenter = () => {
                     <h2>Search Profiles</h2>
                     <form onSubmit={handleSubmit}>
                         <label className='search'>Search: </label>
-                        <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search by Owner' /><br></br>
+                        <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder='Search by Pet Name' /><br></br>
                         <br></br>
                         <button>Search</button>
                     </form>
