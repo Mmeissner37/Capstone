@@ -15,6 +15,12 @@ const Navbar = () => {
             <b>Pawrent Helper</b>
           </Link>
         </li>
+        <div className="nav-buttons">
+            <li>
+                <button onClick={()=> navigate('/profiles')}>Profiles</button>
+                <button onClick={()=> navigate('/')}>Home</button>
+            </li>
+        </div>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>

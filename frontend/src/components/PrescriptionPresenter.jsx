@@ -24,7 +24,7 @@ const PrescriptionPresenter = () => {
     }, [token]);
 
     return ( 
-        <div className='container'>
+        <div>
             <div className='petdrugs'>
                 {meds && 
                 meds.map((prescription) =>

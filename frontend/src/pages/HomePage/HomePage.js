@@ -38,6 +38,13 @@ const HomePage = () => {
       </div><br></br>
       <MyCalendar /><br></br>
       <br></br>
+      <div className='footer'>
+            <a href="/">
+            <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="cat"/>
+            </a>
+            <h5>Go Back to the Top</h5>
+            <br></br>
+        </div>
     </div>
 
   );

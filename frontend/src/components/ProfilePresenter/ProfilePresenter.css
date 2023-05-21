@@ -6,7 +6,7 @@
 
   .present-profile {
     border: solid black;
-    width: 500px;
+    width: 470px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    gap: 1rem;
+    gap: 1.25rem;
   }
   
   .image-form {
@@ -43,5 +43,10 @@
     overflow: auto;
     margin: 1rem 1rem;
     gap: 1rem;
+    padding-left: 0.75rem;
   }
   
+  .search-pets {
+    font-family: inherit;
+
+  }

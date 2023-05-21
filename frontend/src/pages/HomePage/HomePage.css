@@ -1,13 +1,10 @@
 .calender-header {
     align-items: center;
-    width: 71%;
+    max-width: 1200px;
     background: rgb(228, 222, 222);
     border: solid black;
-    margin-top: 1rem;
-    margin-left: 10rem;
-    margin-right: 15rem;
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem auto;
+    padding: 0.75rem;
   }
   
   .homepage {
@@ -27,3 +24,6 @@
     font-family: inherit;
   }
   
+  .footer {
+    text-align: center;
+  }

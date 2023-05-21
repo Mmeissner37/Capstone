@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
+import './DeletePrescriptionPage.css';
 
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -37,27 +38,32 @@ const DeletePrescriptionPage = () => {
 
     return ( 
         <div className='wholepage'>
-            <div className='container'>
-                <h2>Select Prescription to Delete</h2><br></br>
-                <form className='form' onSubmit={handleSubmit}>
-                    <label>Prescription ID: {' '}
-                        <input type='text' value={prescription_id} onChange={(e) => setDrugID(e.target.value)} />
-                    </label>
-                    <label>Prescription Name: {' '}
-                        <input type='text'  value={drug_name} onChange={(e) => setDrugName(e.target.value)} />
-                    </label>
-                    <button>Delete</button><br></br>
-                </form>            
+            <div className='delete-drug-page'>
+                <div className='container'>
+                    <h2>Select Prescription to Delete</h2><br></br>
+                    <br></br>
+                    <form className='form' onSubmit={handleSubmit}>
+                        <label>Prescription ID: {' '}
+                            <input type='text' value={prescription_id} onChange={(e) => setDrugID(e.target.value)} />
+                        </label>
+                        <label>Prescription Name: {' '}
+                            <input type='text'  value={drug_name} onChange={(e) => setDrugName(e.target.value)} />
+                        </label>
+                        <button>Delete</button><br></br>
+                    </form>
+                </div>
+            </div>            
                 <div>
                     <PrescriptionPresenter />
                 </div>
                 <br></br>
-                <a href="/profiles">
-                <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
-                </a>
-                <h5>Go Back To Profiles</h5>
+                <div className='footer'>
+                    <a href="/profiles">
+                    <img src="http://clipart-library.com/images/8cAEyLKni.png" height='50px' width='50px' alt="paw print" />
+                    </a>
+                    <h5>Go Back To Profiles</h5>
+                </div>
             </div>
-        </div>
      );
 }
  

@@ -36,3 +36,7 @@ li {
   cursor: pointer;
   font-size: 2rem;
 }
+
+.nav-buttons {
+  gap: 4rem;
+}

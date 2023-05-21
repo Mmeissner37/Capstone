@@ -12,6 +12,7 @@ const ProfilePresenter = () => {
     const [user, token] = useAuth();
     const [pets, setPets] = useState([]);
     const navigate = useNavigate();
+    const [searchInput, setSearchInput] = useState([]);
     
 
     useEffect (() => {
@@ -30,9 +31,35 @@ const ProfilePresenter = () => {
         fetchPets();
     }, [token]);
 
+    
+function handleSubmit(e) {
+    e.preventDefault();
+    filterPets(searchInput)
+}
+
+function filterPets(searchInput) {
+    debugger
+    let filteredResults = pets.filter((el) =>{
+        if (el.pet_name.includes(searchInput)) {
+            return true;
+        }
+    })
+    setPets(filteredResults);
+}
 
     return (
         <div>
+            <div className='container'>
+                <div className='search-pets'>
+                    <h3>Looking for a particular pet?</h3>
+                        <form onSubmit={handleSubmit}>
+                            <label className='search'>Search: </label>
+                            <input onChange={(e) => setSearchInput(e.target.value)} type="text" placeholder='Search by Pet Name' /><br></br>
+                            <br></br>
+                            <button>Let's take a look!</button>
+                        </form>
+                </div>
+            </div>
             <div className='pet-sorter'>
                 {pets &&
                 pets.map((petprofile) =>

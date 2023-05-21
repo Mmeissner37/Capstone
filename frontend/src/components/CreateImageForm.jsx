@@ -50,7 +50,9 @@ const CreateImage = (props) => {
                                     handleImageChange(e);
                                 }}
                             /><br></br>
-                            <Button type="submit" onClick={(e) => doSubmit(e)}>Submit</Button>
+                            <div className='image-button'>
+                                <Button type="submit" onClick={(e) => doSubmit(e)}>Submit</Button>
+                            </div>
                             {errors.image_url && (
                                 <Form.Text className="alert-danger" tooltip>
                                     {errors.image_url}
