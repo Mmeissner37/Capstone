@@ -117,7 +117,7 @@ button:hover {
 }
 
 .petlist {
-  background-color: rgb(231, 233, 220);
+  background-color: rgb(250, 249, 239);
   text-align: left;
   display: flex;
   flex-direction: row;
