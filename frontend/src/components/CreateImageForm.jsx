@@ -24,6 +24,7 @@ const CreateImage = (props) => {
         let newData = {...data};
         newData["image_url"] = e.target.files[0];
         setData(newData);
+        navigate('/profiles');
     }
 
     const doSubmit = async (e) => {
