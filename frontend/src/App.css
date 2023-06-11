@@ -20,6 +20,7 @@ p {
 button {
   background-color: rgb(185, 230, 247);
   border: 2px solid black;
+  border-radius: 20px;
   color: black;
   font-size: 1rem;
   font-family: inherit;

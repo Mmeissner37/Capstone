@@ -38,7 +38,6 @@ function handleSubmit(e) {
 }
 
 function filterPets(searchInput) {
-    debugger
     let filteredResults = pets.filter((el) =>{
         if (el.pet_name.includes(searchInput)) {
             return true;
