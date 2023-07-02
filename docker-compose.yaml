@@ -1,0 +1,18 @@
+version: '3.1'
+services: 
+  database-container: 
+    build: ./database
+    #Insert image from dockerhub
+    ports: 
+      - 3307:3306
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root 
+  backend-container: 
+    build: ./backend 
+    #insert image from dockerhub 
+    ports: 
+      -8000:8000 
+    restart: always 
+    command: >
+      sh -c 'python manage.py makemigrations && python manage.py migrate'
