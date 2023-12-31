@@ -2,7 +2,7 @@
   background-image: url("../../assets/dog-beach.jpeg");
     height: fixed;
     width: 100%;
-    padding-bottom: 50em;
+    /* padding-bottom: 50em; */
     padding-top: 0.5em;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -17,6 +17,7 @@
   padding-top: 4rem;
   max-width: 800px;
   gap: 4rem;
+  padding-bottom: 30em;
   }
 
 .header {

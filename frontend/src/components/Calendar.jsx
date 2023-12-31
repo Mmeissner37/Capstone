@@ -40,7 +40,7 @@ const MyCalendar = () => {
     return appts && (
         <div className="calendar">
             <FullCalendar 
-                weekends={false}
+                weekends={true}
                 events ={appts}
                 initialView='dayGridMonth'
                 // editable={true}
