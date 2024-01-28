@@ -36,7 +36,7 @@ const LoginPage = () => {
           <label>
             What's the secret word?{" "}
             <input
-              type="text"
+              type="password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}

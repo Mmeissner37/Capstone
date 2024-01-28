@@ -42,7 +42,7 @@ const LoginPage = () => {
           <label>
             Password:{" "}
             <input
-              type="text"
+              type="password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}
