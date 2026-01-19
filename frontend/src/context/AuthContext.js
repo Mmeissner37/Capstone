@@ -19,7 +19,8 @@ function setUserObject(user) {
 }
 
 export const AuthProvider = ({ children }) => {
-  const BASE_URL = "http://127.0.0.1:8000/api/auth";
+  const BASE_URL =
+    (process.env.REACT_APP_API_URL || "http://127.0.0.1:8000") + "/api/auth";
   const userToken = JSON.parse(localStorage.getItem("token"));
   const decodedUser = userToken ? jwtDecode(userToken) : null;
   const [token, setToken] = useState(userToken);
@@ -61,15 +62,13 @@ export const AuthProvider = ({ children }) => {
         let loggedInUser = jwtDecode(response.data.access);
         setUser(setUserObject(loggedInUser));
         setIsServerError(false);
-        if(loggedInUser.is_owner) {
+        if (loggedInUser.is_owner) {
           navigate("/");
-        } 
-        else if (loggedInUser.is_vet) {
-        navigate("/vets")
+        } else if (loggedInUser.is_vet) {
+          navigate("/vets");
+        } else if (loggedInUser.is_guest) {
+          navigate("/guestvet");
         }
-        else if (loggedInUser.is_guest){
-        navigate("/guestvet")
-          }
       } else {
         navigate("/register");
       }

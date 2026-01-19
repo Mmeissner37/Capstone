@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import VetProfilePresenter from "../../components/VetProfilePresenter";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
-import './VetHomePage.css'
+import API_BASE_URL from "../../utils/config";
+import "./VetHomePage.css";
 
 import FullCalendar from "@fullcalendar/react";
 import listPlugin from "@fullcalendar/list";
@@ -14,7 +15,7 @@ const VetHomePage = () => {
   useEffect(() => {
     const seeAppts = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/appts/all/", {
+        let response = await axios.get(`${API_BASE_URL}/appts/all/`, {
           headers: {
             Authorization: "Bearer " + token,
           },
@@ -68,13 +69,17 @@ const VetHomePage = () => {
           <VetProfilePresenter />
         </div>
         <div className="container">
-            <div className="ref">
-                <h3>Referring a patient to a specialist?</h3>
-                <h3>Fellow veterinary professional requiring access to profiles?</h3><br></br>
-                <h3>Provide them with guest access using the credentials below:</h3><br></br>
-                <h4>Username: GuestVet</h4>
-                <h4>Password: LocalPawsGuest1</h4>
-            </div>
+          <div className="ref">
+            <h3>Referring a patient to a specialist?</h3>
+            <h3>
+              Fellow veterinary professional requiring access to profiles?
+            </h3>
+            <br></br>
+            <h3>Provide them with guest access using the credentials below:</h3>
+            <br></br>
+            <h4>Username: GuestVet</h4>
+            <h4>Password: LocalPawsGuest1</h4>
+          </div>
         </div>
       </div>
     )
